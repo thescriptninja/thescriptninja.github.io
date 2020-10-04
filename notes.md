@@ -1,0 +1,33 @@
+---
+layout: default
+title: Notes
+peramlink: /notes/
+---
+
+<div class="home">
+  
+  <h1 class="page-heading">Notes</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% if post.tags contains "note" %}
+      <li class="bordered">
+        <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" style="color:white; font-weight:bold" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <p style="color:grey; font-size:18px;">{{ post.description }}</p>
+        </h2>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <br/>
+<!--   <h1 class="page-heading">Latest Tweet</h1>
+  <div class="latest-tweet">
+    <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Threads like this one make Twitter an occasional gold mine <a href="https://t.co/jReomUbJlb">https://t.co/jReomUbJlb</a></p>&mdash; Parth Paradkar (@thescriptninja_) <a href="https://twitter.com/thescriptninja_/status/1210414724719861760?ref_src=twsrc%5Etfw">December 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div> -->
+  
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+
+</div>

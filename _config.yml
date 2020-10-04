@@ -1,0 +1,30 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Parth Paradkar
+email: parthparadkar3@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  This is my thought repo.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.thescriptninja.tech" # the base hostname & protocol for your site
+domain: thescriptninja.tech
+github_username:  thescriptninja
+facebook_username: parth.paradkar.35
+linkedin_username: parth-paradkar
+twitter_username: thescriptninja_
+youtube_video_id: mx60yNdqlIg
+disqus:
+  shortname: thescriptninja-github-io
+plugins:
+  - jekyll-seo-tag
+  - jemoji
+
+# Build settings
+markdown: kramdown
+
+exclude: ['vendor']
