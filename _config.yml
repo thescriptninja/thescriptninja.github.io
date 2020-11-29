@@ -9,7 +9,7 @@
 title: Parth Paradkar
 email: parthparadkar3@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  This is my thought repo.
+  Thoughts and ponderings of Parth Paradkar
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://thescriptninja.github.io" # the base hostname & protocol for your site
 domain: thescriptninja.github.io
