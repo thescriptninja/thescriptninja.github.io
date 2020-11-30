@@ -29,7 +29,8 @@ My DMs are always open to discussions about programming, books, music, movies, p
 
 ## Currently reading
 
-_A Game of Thrones by George R. R. Martin_ 
+_Fooled by Randomness_ by Nassim Nicholas Taleb
+_The Myth of Sisyphus_ by Albert Camus
 
 ### Playing this on repeat
 <iframe src="https://open.spotify.com/embed/track/5RFFxF1qvmVVbUzI2eeBRv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
