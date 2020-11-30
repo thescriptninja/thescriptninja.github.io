@@ -9,9 +9,12 @@ tags: [post]
 ---
 This is an account of my experience of the CDC internship process 2020-21. Undergraduate students at IIT KGP need to complete an internship at the end of their pre-final year. Career Development Cell (CDC) manages the process for the same.
 
+---
 **Disclaimer** (for people who tend to generalize): 
 
 I was shortlisted for only one company ([Cisco](https://www.cisco.com/)) and I got an internship offer from that company itself. So whatever advice/information that follows is probably not all-encompassing and fully informed. While I have tried to maintain a balanced view, it is impossible to be absolutely objective. Please read with a healthy dose of skepticism!
+
+---
 
 Around mid-August, there was tension and excitement surrounding the much anticipated CDC internship process. I was in the final days of a remote internship at a startup and I feared that I was woefully unprepared to take on the CDC tests. Suddenly, a pandemic seemed to be dwarfed in comparison to the approaching battle. Slowly the companies began with their presentations and then their shortlisting tests, and the stress only increased exponentially. The process was completely remote for the first time. The invaluable support system of batchmates and seniors on campus was missing, which made keeping myself motivated quite difficult.
 
@@ -64,7 +67,8 @@ Looking back on that entire ordeal 2 months later, it seems rather foolish that 
 3. Biases do exist everywhere and for whatever reasons, the world isn’t a fair place for everyone. The key lies in saving the energy spent on complaining and focusing on the things you can control.
 4. Branch matters more than people assume (this is a hard truth). CG matters, but less than what people assume (a 7.5+ CGPA is a safe place to be for most cases).
 5. Competitive programming is helpful, but not an absolute necessity for interviews. People often forget that is primarily a mental sport. While some companies asked for ratings and links to CF profiles, others are only interested in your knowledge of DSA and problem-solving skills. You only need to know enough to clear the interviews. If you like me are not really into CP, I would recommend InterviewBit and Geeks For Geeks.
-6. DSA is not the scary thing that people perceive it to be. It is very much achievable through regular and systematic practice.
+6. DSA is not the scary thing that people perceive it to be. It is very much achievable through regular and systematic practice. 
+
 Reiterating what I said in the disclaimer, I learned this while being shortlisted for a single company and only going through the process till Day3. Hence, the above points might not give you the entire picture.
 
 Surviving this process would have been impossible without the timely support of many people around me- my family at home and my family in IIT KGP. This support might have been in the form of discussing problems and interview experiences or simply participating in stress-relieving rants together. To name a few people who were there throughout - [Sarthak](https://www.facebook.com/sarthakjohnson.prasad) (also my co-intern, yay!), [Swarnim](https://www.facebook.com/SwarnimRaj.0707), [Alok](https://www.facebook.com/profile.php?id=100027653955729), [Laksh](https://www.facebook.com/laksh.doshi.007), [Ashish](https://www.facebook.com/ashish.gokarnkar), [Mukul](https://www.facebook.com/mukul.amehta), [Shubham](https://www.facebook.com/grapheo12) ([his CDC blog post](https://grapheo12.github.io/blog/tech/cdc-intern/)), [Utkarsh](https://www.facebook.com/utkarsh.agrawal.24), and [Sambodhi](https://www.facebook.com/sambodhi.pawar.9638). Thanks to [Naresh](https://github.com/ghostwriternr) for being the ‘wise old man’ with great advice :P. I am grateful to [Hrutvij Chore](https://www.facebook.com/hrutvij322000) and [Tushar Singla](https://www.facebook.com/Singla.Tushar1), who gave me the guidance I needed at the right time. Also, props to the people at Career Development Cell for conducting the process smoothly despite the unforeseen circumstances.
