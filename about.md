@@ -32,6 +32,6 @@ My DMs are always open to discussions about programming, books, music, movies, p
 _A Game of Thrones by George R. R. Martin_ 
 
 ### Playing this on repeat
-<iframe width="560" height="315" src="https://www.youtube.com/embed/{{site.youtube_video_id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://open.spotify.com/embed/track/5RFFxF1qvmVVbUzI2eeBRv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 ***
 ### Thanks for visiting!
