@@ -68,6 +68,9 @@ Looking back on that entire ordeal 2 months later, it seems rather foolish that 
 Reiterating what I said in the disclaimer, I learned this while being shortlisted for a single company and only going through the process till Day3. Hence, the above points might not give you the entire picture.
 
 Surviving this process would have been impossible without the timely support of many people around me- my family at home and my family in IIT KGP. This support might have been in the form of discussing problems and interview experiences or simply participating in stress-relieving rants together. To name a few people who were there throughout - [Sarthak](https://www.facebook.com/sarthakjohnson.prasad) (also my co-intern, yay!), [Swarnim](https://www.facebook.com/SwarnimRaj.0707), [Alok](https://www.facebook.com/profile.php?id=100027653955729), [Laksh](https://www.facebook.com/laksh.doshi.007), [Ashish](https://www.facebook.com/ashish.gokarnkar), [Mukul](https://www.facebook.com/mukul.amehta), [Shubham](https://www.facebook.com/grapheo12) ([his CDC blog post](https://grapheo12.github.io/blog/tech/cdc-intern/)), [Utkarsh](https://www.facebook.com/utkarsh.agrawal.24), and [Sambodhi](https://www.facebook.com/sambodhi.pawar.9638). Thanks to [Naresh](https://github.com/ghostwriternr) for being the ‘wise old man’ with great advice :P. I am grateful to [Hrutvij Chore](https://www.facebook.com/hrutvij322000) and [Tushar Singla](https://www.facebook.com/Singla.Tushar1), who gave me the guidance I needed at the right time. Also, props to the people at Career Development Cell for conducting the process smoothly despite the unforeseen circumstances.
-Thank you!
+
+Thanks for reading!
+
 [CDC CV](https://drive.google.com/file/d/1A04tlYh30YySr6FV7ZU2Ic_UKEzKHXpu/view?usp=sharing)
+
 [Github Profile](https://github.com/thescriptninja)
