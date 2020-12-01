@@ -26,11 +26,14 @@ Finally in September, after a gruelling series of presentations, shortlisting te
 
 
 ### Myths about CDC:
-1. It is super super important 
+
+#### It is super super important 
+
 Like many of my peers, I fell for the trap of assigning extremely high importance to the CDC internship process. This leads to an unnecessarily high levels of stress and anxiety. I consulted some alums and seniors in MetaKGP regarding the entire process and all of them agreed that it was not worth getting so worked up about. It is merely the start of a long and hopefully fulfilling career. Sure, it is a great platform to get an internship at some excellent companies, possibly the best you can get in terms of stipends and PPOs. But is it worth pulling your hair frantically and frustratedly in front of the keyboard at 3 AM, stressed out of your mind? I will go out on a limb here and say.. Maybe not.
 
 
-2. Good companies only come on Day 1 and Day 2. 
+#### Good companies only come on Day 1 and Day 2. 
+
 I feel that there is a lot of unnecessary hype surrounding Day 1 and Day 2 internship offers. To stop myself from going into a rant, I’ll only say this: I think this hype is only made up by social media posts with hashtags and there are great companies that come on the following days too. While I have no qualms about such social media posts (I am guilty of being on both ends of this silly practice), I would any CDC aspirant to stay away from social media during this time. 
 
 Now, let’s get down to business. 
@@ -66,7 +69,7 @@ Looking back on that entire ordeal 2 months later, it seems rather foolish that 
 2. Peer pressure should be harnessed to fuel motivation. Too much can affect you negatively.
 3. Biases do exist everywhere and for whatever reasons, the world isn’t a fair place for everyone. The key lies in saving the energy spent on complaining and focusing on the things you can control.
 4. Branch matters more than people assume (this is a hard truth). CG matters, but less than what people assume (a 7.5+ CGPA is a safe place to be for most cases).
-5. Competitive programming is helpful, but not an absolute necessity for interviews. People often forget that is primarily a mental sport. While some companies asked for ratings and links to CF profiles, others are only interested in your knowledge of DSA and problem-solving skills. You only need to know enough to clear the interviews. If you like me are not really into CP, I would recommend InterviewBit and Geeks For Geeks.
+5. Competitive programming is helpful, but not an absolute necessity for interviews. People often forget that it is primarily a mental sport. While some companies ask for ratings and links to CF profiles, others are only interested in your knowledge of DSA and problem-solving skills. You only need to know enough to clear the interviews. If you, like me, are not really into CP, I would recommend InterviewBit and Geeks For Geeks.
 6. DSA is not the scary thing that people perceive it to be. It is very much achievable through regular and systematic practice. 
 
 Reiterating what I said in the disclaimer, I learned this while being shortlisted for a single company and only going through the process till Day3. Hence, the above points might not give you the entire picture.
