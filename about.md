@@ -26,7 +26,8 @@ I am learning more about Operating Systems and the Go programming language.
 
 ## Currently reading
 
-_Fooled by Randomness_ by Nassim Nicholas Taleb
+_Fooled by Randomness_ by Nassim Nicholas Taleb 
+
 _The Myth of Sisyphus_ by Albert Camus
 
 ### Playing this on repeat
