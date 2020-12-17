@@ -51,7 +51,7 @@ I was finally shortlisted for Cisco, which was one of the better tests I had giv
 The first interview round was taken by a software developer at Cisco. In the beginning, he looked over my CV. On seeing open source projects in the CV, he asked me to share my GitHub profile. There were a few questions about recent projects, favorite programming language, etc.
 After the initial discussion, he asked me to open any code editor on my computer for live coding.
 The first problem was an easy one, related to hashing. The interviewer did not mention this explicitly, I had to figure it out myself after thinking over it for a while. After I had solved the problem satisfactorily, we had a discussion about hashing algorithms and their space-time complexity.
-The second question he asked was about regular expressions, where I had to develop a program to eliminate the names of people that matched a certain pattern. The regular expression approach did not strike me initially in the heat of the interview, so I resorted to working out other methods. The interviewer conceded that my methods worked in a sort of hacky manner, but the proper way to do it was through regex. The interview ended with the interviewer asking me questions about the work I was interested in working in the future.
+The second question he asked was about regular expressions, where I had to develop a program to eliminate the names of people that matched a certain pattern. The regular expression approach did not strike me initially in the heat of the interview, so I resorted to working out other methods. The interviewer conceded that my methods worked in a sort of hacky manner, but the proper way to do it was through regex. The interview ended with the interviewer asking me questions about the work I was interested in doing in the future.
 After leaving the interview, I was pretty satisfied but still had doubts about the answers I had given.
 
 #### Round 2 
@@ -65,7 +65,7 @@ The result came in the evening through MFTP and after seeing my name at nearly t
 
 ### Conclusion 
 Looking back on that entire ordeal 2 months later, it seems rather foolish that I had got myself so worked up. I feel like I would have fared better without all that tension. A few general and specific things I learned through this process:
-1. The hardest thing to do in pressured situations is to maintain objectivity and the sense of calm that comes along with it. An effort must be made consciously to be objective and to maintain a certain level of aloofness towards everything. This would probably give you a competitive edge. I have tried meditation for this and it works, trust me.
+1. The hardest thing to do in pressured situations is to maintain objectivity and the sense of calm that comes along with it. An effort must be made consciously to be objective and to maintain a certain level of aloofness towards everything. This would probably produce a competitive edge.
 2. Peer pressure should be harnessed to fuel motivation. Too much can affect you negatively.
 3. Biases do exist everywhere and for whatever reasons, the world isn’t a fair place for everyone. The key lies in saving the energy spent on complaining and focusing on the things you can control.
 4. Branch matters more than people assume (this is a hard truth). CG matters, but less than what people assume (a 7.5+ CGPA is a safe place to be for most cases).
