@@ -12,7 +12,7 @@ layout: default
         <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
         <h2>
           <a class="post-link" style="color:white; font-weight:bold" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          <p style="color:grey; font-size:18px;">{{ post.description }}</p>
+          <p class="post-desc">{{ post.description }}</p>
         </h2>
       </li>
       {% endif %}
