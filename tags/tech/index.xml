@@ -20,6 +20,18 @@ I was shortlisted for only one company (Cisco) and I got an internship offer fro
     </item>
     
     <item>
+      <title>Understanding correlation between data features</title>
+      <link>https://thescriptninja.github.io/posts/understanding-correlation-between-data-features/</link>
+      <pubDate>Mon, 20 Jan 2020 01:23:54 +0530</pubDate>
+      
+      <guid>https://thescriptninja.github.io/posts/understanding-correlation-between-data-features/</guid>
+      <description>Understanding correlation One of the main questions I faced while exploring data was that how can I measure the strength of the relationship between two features of the data.
+For example, how is the price of a car related with its mileage? How do we quantify their interdependence? How strong is the relationship?
+I attempt to explore this mathematically in this notebook.
+# Importing the required libraries import pandas as pd import seaborn as sns We shall consider a dataset that gives the specifications of cars and their prices.</description>
+    </item>
+    
+    <item>
       <title>My experiences in programming - Year One</title>
       <link>https://thescriptninja.github.io/posts/my-experiences-in-programming/</link>
       <pubDate>Sun, 21 Jul 2019 11:28:18 +0530</pubDate>

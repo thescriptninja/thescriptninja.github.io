@@ -7,29 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sat, 02 Jan 2021 18:03:58 +0530</lastBuildDate><atom:link href="https://thescriptninja.github.io/tags/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Content Review 2020</title>
-      <link>https://thescriptninja.github.io/posts/content-review/</link>
-      <pubDate>Sat, 02 Jan 2021 18:03:58 +0530</pubDate>
-      
-      <guid>https://thescriptninja.github.io/posts/content-review/</guid>
-      <description>In 2020, the amount of time I spent on the internet was probably the highest I have in any previous year and I have consumed a near-unhealthy amount of digital content while being at home for long periods. I thought it would be nice to look back. This is inspired by a recent blogpost by @xypnox.
-Literature I read regularly before joining college, but because of involvements on campus and other things to explore, I didn’t read as much as I used to.</description>
-    </item>
-    
-    <item>
-      <title>Understanding correlation between data features</title>
-      <link>https://thescriptninja.github.io/posts/understanding-correlation-between-data-features/</link>
-      <pubDate>Mon, 20 Jan 2020 01:23:54 +0530</pubDate>
-      
-      <guid>https://thescriptninja.github.io/posts/understanding-correlation-between-data-features/</guid>
-      <description>Understanding correlation One of the main questions I faced while exploring data was that how can I measure the strength of the relationship between two features of the data.
-For example, how is the price of a car related with its mileage? How do we quantify their interdependence? How strong is the relationship?
-I attempt to explore this mathematically in this notebook.
-# Importing the required libraries import pandas as pd import seaborn as sns We shall consider a dataset that gives the specifications of cars and their prices.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 16 Apr 2019 09:20:18 +0530</lastBuildDate><atom:link href="https://thescriptninja.github.io/tags/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World!</title>
       <link>https://thescriptninja.github.io/posts/first-post/</link>
