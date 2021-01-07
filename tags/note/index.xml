@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>note on Parth Paradkar</title>
-    <link>http://example.org/tags/note/</link>
+    <link>https://thescriptninja.github.io/tags/note/</link>
     <description>Recent content in note on Parth Paradkar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sat, 30 May 2020 09:20:18 +0530</lastBuildDate><atom:link href="http://example.org/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 May 2020 09:20:18 +0530</lastBuildDate><atom:link href="https://thescriptninja.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Trying to make better decisions</title>
-      <link>http://example.org/notes/decisions/</link>
+      <link>https://thescriptninja.github.io/notes/decisions/</link>
       <pubDate>Sat, 30 May 2020 09:20:18 +0530</pubDate>
       
-      <guid>http://example.org/notes/decisions/</guid>
+      <guid>https://thescriptninja.github.io/notes/decisions/</guid>
       <description>Dreams During my JEE preparation days, I often fantasized of the independence that lay before me, regardless of where I went after it was over. When it became clear I was to come to KGP, the excitement multiplied manifold as I started imagining the life that lay before me. Most of this excitement lay in the anticipation of making my decisions and choices by myself.
 I had always been shielded by my parents in making big decisions.</description>
     </item>

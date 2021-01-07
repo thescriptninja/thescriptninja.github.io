@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tech on Parth Paradkar</title>
-    <link>http://example.org/tags/tech/</link>
+    <link>https://thescriptninja.github.io/tags/tech/</link>
     <description>Recent content in tech on Parth Paradkar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Mon, 30 Nov 2020 14:05:41 +0530</lastBuildDate><atom:link href="http://example.org/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Nov 2020 14:05:41 +0530</lastBuildDate><atom:link href="https://thescriptninja.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CDC Internship Process 2020 - Cisco</title>
-      <link>http://example.org/posts/cdc-internship-process-2020-cisco/</link>
+      <link>https://thescriptninja.github.io/posts/cdc-internship-process-2020-cisco/</link>
       <pubDate>Mon, 30 Nov 2020 14:05:41 +0530</pubDate>
       
-      <guid>http://example.org/posts/cdc-internship-process-2020-cisco/</guid>
+      <guid>https://thescriptninja.github.io/posts/cdc-internship-process-2020-cisco/</guid>
       <description>This is an account of my experience of the CDC internship process 2020-21. Undergraduate students at IIT KGP need to complete an internship at the end of their pre-final year. Career Development Cell (CDC) manages the process for the same.
  Disclaimer (for people who tend to generalize):
 I was shortlisted for only one company (Cisco) and I got an internship offer from that company itself. So whatever advice/information that follows is probably not all-encompassing and fully informed.</description>
@@ -21,10 +21,10 @@ I was shortlisted for only one company (Cisco) and I got an internship offer fro
     
     <item>
       <title>My experiences in programming - Year One</title>
-      <link>http://example.org/posts/my-experiences-in-programming/</link>
+      <link>https://thescriptninja.github.io/posts/my-experiences-in-programming/</link>
       <pubDate>Sun, 21 Jul 2019 11:28:18 +0530</pubDate>
       
-      <guid>http://example.org/posts/my-experiences-in-programming/</guid>
+      <guid>https://thescriptninja.github.io/posts/my-experiences-in-programming/</guid>
       <description>As another year at college begins with all its feverish energy and stress, I am compelled to reminisce about the beautiful quagmire of open source programming I found myself in about a year ago. I remember the time I started learning C as a part of my first year course. It was not my first experience in programming but all I had done before that was HTML and I will go out on a limb here to say that it was not really programming (sorry frontend guys).</description>
     </item>
     
