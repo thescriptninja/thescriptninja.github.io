@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Parth Paradkar</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Parth Paradkar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Copyright notice</copyright>
+    <lastBuildDate>Sat, 02 Jan 2021 18:03:58 +0530</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Content Review 2020</title>
+      <link>http://example.org/posts/content-review/</link>
+      <pubDate>Sat, 02 Jan 2021 18:03:58 +0530</pubDate>
+      
+      <guid>http://example.org/posts/content-review/</guid>
+      <description>In 2020, the amount of time I spent on the internet was probably the highest I have in any previous year and I have consumed a near-unhealthy amount of digital content while being at home for long periods. I thought it would be nice to look back. This is inspired by a recent blogpost by @xypnox.
+Literature I read regularly before joining college, but because of involvements on campus and other things to explore, I didn’t read as much as I used to.</description>
+    </item>
+    
+    <item>
+      <title>CDC Internship Process 2020 - Cisco</title>
+      <link>http://example.org/posts/cdc-internship-process-2020-cisco/</link>
+      <pubDate>Mon, 30 Nov 2020 14:05:41 +0530</pubDate>
+      
+      <guid>http://example.org/posts/cdc-internship-process-2020-cisco/</guid>
+      <description>This is an account of my experience of the CDC internship process 2020-21. Undergraduate students at IIT KGP need to complete an internship at the end of their pre-final year. Career Development Cell (CDC) manages the process for the same.
+ Disclaimer (for people who tend to generalize):
+I was shortlisted for only one company (Cisco) and I got an internship offer from that company itself. So whatever advice/information that follows is probably not all-encompassing and fully informed.</description>
+    </item>
+    
+    <item>
+      <title>Memories of 2.2s</title>
+      <link>http://example.org/posts/memories-of-2.2s/</link>
+      <pubDate>Sat, 27 Jun 2020 11:28:18 +0530</pubDate>
+      
+      <guid>http://example.org/posts/memories-of-2.2s/</guid>
+      <description>Walks on college roads have no obligation to occur at a ‘proper’ time of the day. Their spontaneity owes itself to the comfort of the roads being inseparable landmarks of the campus the students proudly call their second home. If ever there was a road that could be buzzing with activity at 2 AM and deathly quiet at 11 AM, it would be the beloved 2.2 of IIT Kharagpur. Visitors often look and praise buildings- the main building with its stately proclamation of service and patriotism, the massive library, Gymkhana, the classrooms in Nalanda, the Netaji auditorium and look in awe at them for having stood through the years shouldering the weight of some of India’s smartest.</description>
+    </item>
+    
+    <item>
+      <title>Trying to make better decisions</title>
+      <link>http://example.org/notes/decisions/</link>
+      <pubDate>Sat, 30 May 2020 09:20:18 +0530</pubDate>
+      
+      <guid>http://example.org/notes/decisions/</guid>
+      <description>Dreams During my JEE preparation days, I often fantasized of the independence that lay before me, regardless of where I went after it was over. When it became clear I was to come to KGP, the excitement multiplied manifold as I started imagining the life that lay before me. Most of this excitement lay in the anticipation of making my decisions and choices by myself.
+I had always been shielded by my parents in making big decisions.</description>
+    </item>
+    
+    <item>
+      <title>Understanding correlation between data features</title>
+      <link>http://example.org/posts/understanding-correlation-between-data-features/</link>
+      <pubDate>Mon, 20 Jan 2020 01:23:54 +0530</pubDate>
+      
+      <guid>http://example.org/posts/understanding-correlation-between-data-features/</guid>
+      <description>Understanding correlation One of the main questions I faced while exploring data was that how can I measure the strength of the relationship between two features of the data.
+For example, how is the price of a car related with its mileage? How do we quantify their interdependence? How strong is the relationship?
+I attempt to explore this mathematically in this notebook.
+# Importing the required libraries import pandas as pd import seaborn as sns We shall consider a dataset that gives the specifications of cars and their prices.</description>
+    </item>
+    
+    <item>
+      <title>My experiences in programming - Year One</title>
+      <link>http://example.org/posts/my-experiences-in-programming/</link>
+      <pubDate>Sun, 21 Jul 2019 11:28:18 +0530</pubDate>
+      
+      <guid>http://example.org/posts/my-experiences-in-programming/</guid>
+      <description>As another year at college begins with all its feverish energy and stress, I am compelled to reminisce about the beautiful quagmire of open source programming I found myself in about a year ago. I remember the time I started learning C as a part of my first year course. It was not my first experience in programming but all I had done before that was HTML and I will go out on a limb here to say that it was not really programming (sorry frontend guys).</description>
+    </item>
+    
+    <item>
+      <title>An unwanted adventure</title>
+      <link>http://example.org/posts/an-unwanted-adventure/</link>
+      <pubDate>Wed, 08 May 2019 17:48:19 +0530</pubDate>
+      
+      <guid>http://example.org/posts/an-unwanted-adventure/</guid>
+      <description>The events of the last 24 hours have been unexpected, unthinkable, unimaginable, unbelievable and most of all undesirable. I have found out just how unlucky and lucky I can get on the same day. So here goes my frustrating travelogue.
+The exams were finally over and after a long and exhausting semester of 4 months, I was finally going home. Me and two of my friends were to be travelling together from KGP to Kolkata by cab to catch a 10:00 PM flight to Pune.</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>http://example.org/posts/first-post/</link>
+      <pubDate>Tue, 16 Apr 2019 09:20:18 +0530</pubDate>
+      
+      <guid>http://example.org/posts/first-post/</guid>
+      <description>After a LOT of Google searches, deleted repositories and headaches born out of frustration, this blog is finally and thankfully up and running. Who was the guy who said Jekyll was easy?
+Now that a blog has been born, so has the responsibility of posting regularly. So let&amp;rsquo;s see how this works out! But for now, Adios!
+BTW here is the most useful link I found to create this blog</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://example.org/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/about/</guid>
+      <description>Hi! I am Parth Paradkar. I am a third year undergraduate studying Electrical Engineering at IIT Kharagpur (remotely these days, unfortunately). I love building things, software especially. I am a Python fan with a love for open source software. I am always curious about new technologies and their applications.
+I am passionate about discovering new music and am currently hooked to Led Zepellin, The Doors, The War on Drugs and Blackstratblues.</description>
+    </item>
+    
+  </channel>
+</rss>

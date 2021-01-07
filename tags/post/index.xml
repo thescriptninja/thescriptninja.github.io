@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>post on Parth Paradkar</title>
+    <link>http://example.org/tags/post/</link>
+    <description>Recent content in post on Parth Paradkar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Copyright notice</copyright>
+    <lastBuildDate>Sat, 02 Jan 2021 18:03:58 +0530</lastBuildDate><atom:link href="http://example.org/tags/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Content Review 2020</title>
+      <link>http://example.org/posts/content-review/</link>
+      <pubDate>Sat, 02 Jan 2021 18:03:58 +0530</pubDate>
+      
+      <guid>http://example.org/posts/content-review/</guid>
+      <description>In 2020, the amount of time I spent on the internet was probably the highest I have in any previous year and I have consumed a near-unhealthy amount of digital content while being at home for long periods. I thought it would be nice to look back. This is inspired by a recent blogpost by @xypnox.
+Literature I read regularly before joining college, but because of involvements on campus and other things to explore, I didn’t read as much as I used to.</description>
+    </item>
+    
+    <item>
+      <title>Understanding correlation between data features</title>
+      <link>http://example.org/posts/understanding-correlation-between-data-features/</link>
+      <pubDate>Mon, 20 Jan 2020 01:23:54 +0530</pubDate>
+      
+      <guid>http://example.org/posts/understanding-correlation-between-data-features/</guid>
+      <description>Understanding correlation One of the main questions I faced while exploring data was that how can I measure the strength of the relationship between two features of the data.
+For example, how is the price of a car related with its mileage? How do we quantify their interdependence? How strong is the relationship?
+I attempt to explore this mathematically in this notebook.
+# Importing the required libraries import pandas as pd import seaborn as sns We shall consider a dataset that gives the specifications of cars and their prices.</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>http://example.org/posts/first-post/</link>
+      <pubDate>Tue, 16 Apr 2019 09:20:18 +0530</pubDate>
+      
+      <guid>http://example.org/posts/first-post/</guid>
+      <description>After a LOT of Google searches, deleted repositories and headaches born out of frustration, this blog is finally and thankfully up and running. Who was the guy who said Jekyll was easy?
+Now that a blog has been born, so has the responsibility of posting regularly. So let&amp;rsquo;s see how this works out! But for now, Adios!
+BTW here is the most useful link I found to create this blog</description>
+    </item>
+    
+  </channel>
+</rss>

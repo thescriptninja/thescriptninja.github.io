@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>writing on Parth Paradkar</title>
+    <link>http://example.org/tags/writing/</link>
+    <description>Recent content in writing on Parth Paradkar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Copyright notice</copyright>
+    <lastBuildDate>Sat, 27 Jun 2020 11:28:18 +0530</lastBuildDate><atom:link href="http://example.org/tags/writing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memories of 2.2s</title>
+      <link>http://example.org/posts/memories-of-2.2s/</link>
+      <pubDate>Sat, 27 Jun 2020 11:28:18 +0530</pubDate>
+      
+      <guid>http://example.org/posts/memories-of-2.2s/</guid>
+      <description>Walks on college roads have no obligation to occur at a ‘proper’ time of the day. Their spontaneity owes itself to the comfort of the roads being inseparable landmarks of the campus the students proudly call their second home. If ever there was a road that could be buzzing with activity at 2 AM and deathly quiet at 11 AM, it would be the beloved 2.2 of IIT Kharagpur. Visitors often look and praise buildings- the main building with its stately proclamation of service and patriotism, the massive library, Gymkhana, the classrooms in Nalanda, the Netaji auditorium and look in awe at them for having stood through the years shouldering the weight of some of India’s smartest.</description>
+    </item>
+    
+  </channel>
+</rss>
