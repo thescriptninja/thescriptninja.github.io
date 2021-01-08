@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>post on Parth Paradkar</title>
-    <link>https://thescriptninja.github.io/tags/post/</link>
+    <link>https://parth-paradkar.github.io/tags/post/</link>
     <description>Recent content in post on Parth Paradkar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Tue, 16 Apr 2019 09:20:18 +0530</lastBuildDate><atom:link href="https://thescriptninja.github.io/tags/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Apr 2019 09:20:18 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/tags/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World!</title>
-      <link>https://thescriptninja.github.io/posts/first-post/</link>
+      <link>https://parth-paradkar.github.io/posts/first-post/</link>
       <pubDate>Tue, 16 Apr 2019 09:20:18 +0530</pubDate>
       
-      <guid>https://thescriptninja.github.io/posts/first-post/</guid>
+      <guid>https://parth-paradkar.github.io/posts/first-post/</guid>
       <description>After a LOT of Google searches, deleted repositories and headaches born out of frustration, this blog is finally and thankfully up and running. Who was the guy who said Jekyll was easy?
 Now that a blog has been born, so has the responsibility of posting regularly. So let&amp;rsquo;s see how this works out! But for now, Adios!
 BTW here is the most useful link I found to create this blog</description>
