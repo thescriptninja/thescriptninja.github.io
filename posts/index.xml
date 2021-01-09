@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sat, 02 Jan 2021 18:03:58 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Jan 2021 11:14:30 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shifting to Hugo</title>
+      <link>https://parth-paradkar.github.io/posts/shift-to-hugo/</link>
+      <pubDate>Sat, 09 Jan 2021 11:14:30 +0530</pubDate>
+      
+      <guid>https://parth-paradkar.github.io/posts/shift-to-hugo/</guid>
+      <description>After having using Jekyll for a long time, I have shifted to Hugo for this GitHub pages blog.
+What is Hugo? Hugo, just like Jekyll, is a static site generator. While Jekyll is written in Ruby, Hugo is written in Go. These generators source their content from markdown files. They use templating engines to generate the required HTML, CSS and JS files according to the logic described in the config file and templates.</description>
+    </item>
+    
     <item>
       <title>Content Review 2020</title>
       <link>https://parth-paradkar.github.io/posts/content-review/</link>
