@@ -99,15 +99,15 @@
 <p>One of the main questions I faced while exploring data was that how can I measure the strength of the relationship between two features of the data.</p>
 <p>For example, how is the price of a car related with its mileage? How do we quantify their interdependence? How strong is the relationship?</p>
 <p>I attempt to explore this mathematically in this notebook.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000"># Importing the required libraries</span>
-<span style="color:#00f">import</span> pandas <span style="color:#00f">as</span> pd
-<span style="color:#00f">import</span> seaborn <span style="color:#00f">as</span> sns
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#888"># Importing the required libraries</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#b06;font-weight:bold">pandas</span> <span style="color:#080;font-weight:bold">as</span> <span style="color:#b06;font-weight:bold">pd</span>
+<span style="color:#080;font-weight:bold">import</span> <span style="color:#b06;font-weight:bold">seaborn</span> <span style="color:#080;font-weight:bold">as</span> <span style="color:#b06;font-weight:bold">sns</span>
 </code></pre></div><h3 id="we-shall-consider-a-dataset-that-gives-the-specifications-of-cars-and-their-prices">We shall consider a dataset that gives the specifications of cars and their prices.</h3>
 <p>Dataset link: <a href="https://archive.ics.uci.edu/ml/datasets/automobile">https://archive.ics.uci.edu/ml/datasets/automobile</a></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df = pd.read_csv(<span style="color:#a31515">&#34;Automobile_data.csv&#34;</span>)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df = pd.read_csv(<span style="color:#d20;background-color:#fff0f0">&#34;Automobile_data.csv&#34;</span>)
 
-<span style="color:#008000"># We shall consider three variables: the logarithm of the price, city mileage, curb weight.</span>
-test_df = pd.read_csv(<span style="color:#a31515">&#39;corr_data.csv&#39;</span>)
+<span style="color:#888"># We shall consider three variables: the logarithm of the price, city mileage, curb weight.</span>
+test_df = pd.read_csv(<span style="color:#d20;background-color:#fff0f0">&#39;corr_data.csv&#39;</span>)
 </code></pre></div><h2 id="the-pearson-correlation-coefficient">The Pearson Correlation Coefficient</h2>
 <p>To measure the linear correlation between variables, correlation coefficients are defined. One such coefficient that pandas uses by default is the Pearson correlation coefficient.</p>
 <p>Suppose we have two features (columns in the data) of the data: <code>X</code> and <code>Y</code>. Each feature contains <code>n</code> data points. Pearson correlation $r_{XY}$ is defined as:</p>
@@ -160,7 +160,7 @@ test_df = pd.read_csv(<span style="color:#a31515">&#39;corr_data.csv&#39;</span>
 <p><!-- raw HTML omitted --></p>
 <!-- raw HTML omitted -->
 <p>I will try and give you a mathematical intuition of what is actually happening behind the scenes.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#008000"># Calculating the mean values of each column</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#888"># Calculating the mean values of each column</span>
 
 avgs = test_df.mean()
 avgs

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sat, 09 Jan 2021 11:14:30 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jan 2021 23:53:27 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring CPython</title>
+      <link>https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/</link>
+      <pubDate>Mon, 18 Jan 2021 23:53:27 +0530</pubDate>
+      
+      <guid>https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/</guid>
+      <description>Inspiration Last year, I came across this GitHub repo, which describes how the internet works in great detail by going through everything that happens from when the user enters a character in the browser to when the web page is displayed. I liked the idea of taking something commonplace and going very deep into its workings. I wondered if the same could be done for a user running a very simple Python script.</description>
+    </item>
+    
     <item>
       <title>Shifting to Hugo</title>
       <link>https://parth-paradkar.github.io/posts/shift-to-hugo/</link>

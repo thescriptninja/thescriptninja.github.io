@@ -203,7 +203,7 @@ ul {
 .highlight pre {
     margin-bottom: 0;
     margin-top: 0;
-    padding: 20px;
+    padding: 0 !important;
     background-color: transparent !important;
 }
 
