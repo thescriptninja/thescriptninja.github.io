@@ -7,21 +7,31 @@
 <meta itemprop="description" content="Studying the Python Virtual machine">
 <meta itemprop="datePublished" content="2021-01-18T23:53:27+05:30" />
 <meta itemprop="dateModified" content="2021-01-18T23:53:27+05:30" />
-<meta itemprop="wordCount" content="1425">
+<meta itemprop="wordCount" content="1426">
 
 
 
 <meta itemprop="keywords" content="tech,python," />
-<meta property="og:title" content="Exploring CPython" />
-<meta property="og:description" content="Studying the Python Virtual machine" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/" />
-<meta property="article:published_time" content="2021-01-18T23:53:27+05:30" />
-<meta property="article:modified_time" content="2021-01-18T23:53:27+05:30" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Exploring CPython"/>
-<meta name="twitter:description" content="Studying the Python Virtual machine"/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+
+	<title>Parth Paradkar</title>
+	<meta name="title" content="Parth Paradkar">
+	<meta name="description" content="Thoughts and musings">
+
+	
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://parth-paradkar.github.io/">
+	<meta property="og:title" content="Parth Paradkar">
+	<meta property="og:description" content="Thoughts and musings">
+	<meta property="og:image" content="https://parth-paradkar.github.io/img/card.jpg">
+
+	
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://parth-paradkar.github.io/">
+	<meta property="twitter:title" content="Parth Paradkar">
+	<meta property="twitter:description" content="Thoughts and musings">
+	<meta property="twitter:image" content="https://parth-paradkar.github.io/img/card.jpg">
+
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/main.css" />
 
@@ -199,7 +209,7 @@
     &gt;&gt;   30 LOAD_FAST                2 (2)
          32 RETURN_VALUE
 
-</code></pre></div><p>Again, this looks very tedious to read. However, you go through each line, you will realize that most operations are just simple stack operations like loading, pop, store, etc. It is interesting to see how the loop has been implemented using <code>JUMP</code> opcodes. The <code>POP_JUMP_IF_FALSE</code> governs the exit condition of the loop, where it jumps out of the loop to offset <code>30</code> if the boolean after the comparison is evaluated to be false. <code>JUMP_ABSOLUTE</code> causes the &lsquo;looping&rsquo; behavior, by returning control to the top of the loop again (offset <code>8</code>).</p>
+</code></pre></div><p>Again, this looks very tedious to read. However, if you go through each line, you will see that most operations are just simple stack operations like loading, pop, store, etc. It is interesting to see how the loop has been implemented using <code>JUMP</code> opcodes. The <code>POP_JUMP_IF_FALSE</code> governs the exit condition of the loop, where it jumps out of the loop to offset <code>30</code> if the boolean after the comparison is evaluated to be false. <code>JUMP_ABSOLUTE</code> causes the &lsquo;looping&rsquo; behavior, by returning control to the top of the loop again (offset <code>8</code>).</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>If you made it this far, you might be wondering, &ldquo;This is all nice, but I will never put this to actual use. What&rsquo;s the use of knowing this?&rdquo;. To be honest, even I haven&rsquo;t found the answer to that question :P. The best I can offer is some relief to the curiosity about the internal workings of Python :D</p>
 <p>A few good resources I have found related to this:</p>
