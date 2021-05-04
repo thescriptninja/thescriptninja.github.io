@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Mon, 18 Jan 2021 23:53:27 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 May 2021 10:39:42 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a VS Code Extension</title>
+      <link>https://parth-paradkar.github.io/posts/building-a-vs-code-extension/</link>
+      <pubDate>Tue, 04 May 2021 10:39:42 +0530</pubDate>
+      
+      <guid>https://parth-paradkar.github.io/posts/building-a-vs-code-extension/</guid>
+      <description>Motivation I have been writing TILs(short notes about what I learned each day) in Dendron for a few days now, for which I need to specify the date of each TIL . Since looking at the date in the top right corner and typing a few characters out was excruciatingly painful, I used to get this from the date shell command. This required me to open a terminal in VS Code (I usually don&amp;rsquo;t have one open when I am writing notes), enter the command, copy the output and paste it where I required it.</description>
+    </item>
+    
     <item>
       <title>Exploring CPython</title>
       <link>https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/</link>
