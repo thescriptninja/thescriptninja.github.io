@@ -1,126 +1,69 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Building a VS Code Extension</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="Building a VS Code Extension">
-<meta itemprop="description" content="Quite a lame and unnecessary one tbh">
-<meta itemprop="datePublished" content="2021-05-04T10:39:42+05:30" />
-<meta itemprop="dateModified" content="2021-05-04T10:39:42+05:30" />
-<meta itemprop="wordCount" content="701">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Building a VS Code Extension - Parth Paradkar</title><meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-<meta itemprop="keywords" content="tech," />
-
-	<title>Parth Paradkar</title>
-	<meta name="title" content="Parth Paradkar">
-	<meta name="description" content="Quite a lame and unnecessary one tbh">
-
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Building a VS Code Extension" />
+<meta property="og:description" content="Quite a lame and unnecessary one tbh" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://parth-paradkar.github.io/posts/building-a-vs-code-extension/" />
+<meta property="article:published_time" content="2021-05-04T10:39:42+05:30" />
+<meta property="article:modified_time" content="2021-05-04T10:39:42+05:30" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Building a VS Code Extension"/>
+<meta name="twitter:description" content="Quite a lame and unnecessary one tbh"/>
+<script src="https://parth-paradkar.github.io/js/feather.min.js"></script>
 	
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://parth-paradkar.github.io/">
-	<meta property="og:title" content="Parth Paradkar">
-	<meta property="og:description" content="Quite a lame and unnecessary one tbh">
-	<meta property="og:image" content="https://parth-paradkar.github.io/img/card.jpg">
-
+	<link href="https://parth-paradkar.github.io/css/fonts.css" rel="stylesheet">
 	
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://parth-paradkar.github.io/">
-	<meta property="twitter:title" content="Parth Paradkar">
-	<meta property="twitter:description" content="Quite a lame and unnecessary one tbh">
-	<meta property="twitter:image" content="https://parth-paradkar.github.io/img/card.jpg">
-
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://parth-paradkar.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://parth-paradkar.github.io/js/main.js"></script>
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://parth-paradkar.github.io/css/dark.css"  />
+	
+	
 </head>
-
 <body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://parth-paradkar.github.io/">
-				<img src="https://github.com/parth-paradkar.png" alt="Parth Paradkar" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://parth-paradkar.github.io/">Parth Paradkar</a></h1>
-	<div class="site-description"><p>Thoughts and musings</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/parth-paradkar" title="Github"><i data-feather="github"></i></a></li><li><a href="https://twitter.com/parthparadkar_" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/parth-paradkar/" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><span class="scheme-toggle"><a href="#" id="scheme-toggle"></a></li>
-			</ul>
-		</nav>
-		
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://parth-paradkar.github.io/">Parth Paradkar</a>
 	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-			<li>
-				<a href="/">Home</a>
-			</li>
-			
-			<li>
-				<a href="/notes">Notes</a>
-			</li>
-			
-			<li>
-				<a href="/tags">Tags</a>
-			</li>
-			
-			<li>
-				<a href="/cv.pdf">CV</a>
-			</li>
-			
-			<li>
-				<a href="/about">About</a>
-			</li>
-			
-		</ul>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/tags">Tags</a>
+		
+		<a href="/cv.pdf">CV</a>
+		
+		<a href="/about">About</a>
+		
 	</nav>
-</div>
+</header>
 
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Building a VS Code Extension</h1>
+			<div class="meta">Posted on May 4, 2021</div>
+		</div>
+		
 
-		<div class="post">
-			<div class="post-header">
-				
-					<div class="meta">
-						<div class="date">
-							<span class="day">04</span>
-							<span class="rest">May 2021</span>
-						</div>
-					</div>
-				
-				<div class="matter">
-					<h1 class="title">Building a VS Code Extension</h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<h2 id="motivation">Motivation</h2>
+		<section class="body">
+			<h2 id="motivation">Motivation</h2>
 <p>I have been writing TILs(short notes about what I learned each day) in <a href="https://www.dendron.so/">Dendron</a> for a few days now, for which I need to specify the date of each TIL . Since looking at the date in the top right corner and typing a few characters out was excruciatingly painful, I used to get this from the <code>date</code> shell command. This required me to open a terminal in VS Code (I usually don&rsquo;t have one open when I am writing notes), enter the command, copy the output and paste it where I required it. As this too was proving to be an insane amount of effort, I had to automate it. Obviously.</p>
 <h2 id="but-why-not-use-keybindings-directly">But why not use keybindings directly?</h2>
 <p>Well, that&rsquo;s what I thought.</p>
 <p>Initially, I stuck to my approach of getting the date from the shell command and somehow transferring it to the text editor in focus. The next logical step was to get the output of the command into the clipboard. After that, it could be pasted into the editor automatically. The aim was to achieve all this with a single keystroke or key combination.</p>
 <p>To transfer the output of the <code>date</code> command to the clipboard, I came across <a href="https://github.com/astrand/xclip">xclip</a> and it worked pretty good.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> date | xclip -sel clip
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> date | xclip -sel clip
 </code></pre></div><p>This command pipes the output of <code>date</code> to the clipboard. Now, how to run this in the VS Code environment?</p>
 <p>Apparently, keybindings can only call methods available in the VS Code API directly. To attach a keybinding to a shell command, I found that an <a href="https://marketplace.visualstudio.com/items?itemName=petekinnecom.terminal-command-keys">extension</a> has to be installed. Using this extension, I was able to attach the above command to a preferred key combination. This was done by adding an entry in the <code>keybindings.json</code> file as follows.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#b06;font-weight:bold">&#34;key&#34;</span>: <span style="color:#d20;background-color:#fff0f0">&#34;ctrl+m d&#34;</span>,
-    <span style="color:#b06;font-weight:bold">&#34;command&#34;</span>: <span style="color:#d20;background-color:#fff0f0">&#34;terminalCommandKeys.run&#34;</span>,
-    <span style="color:#b06;font-weight:bold">&#34;args&#34;</span>: {
-        <span style="color:#b06;font-weight:bold">&#34;cmd&#34;</span>: <span style="color:#d20;background-color:#fff0f0">&#34;date | xclip -sel clip&#34;</span>,
-        <span style="color:#b06;font-weight:bold">&#34;newTerminal&#34;</span>: <span style="color:#080;font-weight:bold">false</span>,
-        <span style="color:#b06;font-weight:bold">&#34;showTerminal&#34;</span>: <span style="color:#080;font-weight:bold">false</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;ctrl+m d&#34;</span>,
+    <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;terminalCommandKeys.run&#34;</span>,
+    <span style="color:#f92672">&#34;args&#34;</span>: {
+        <span style="color:#f92672">&#34;cmd&#34;</span>: <span style="color:#e6db74">&#34;date | xclip -sel clip&#34;</span>,
+        <span style="color:#f92672">&#34;newTerminal&#34;</span>: <span style="color:#66d9ef">false</span>,
+        <span style="color:#f92672">&#34;showTerminal&#34;</span>: <span style="color:#66d9ef">false</span>
     }
  }
 </code></pre></div><p>Now the task was to transfer the text from the clipboard to the position of the cursor. This had to be done using the VS Code API. This is where the problem started. Apparently, VS Code does not allow you to run multiple commands with a single key. It has been <a href="https://github.com/Microsoft/vscode/issues/871">a long requested feature</a> in VS Code and the only workarounds are awkward macros and tasks.  There is really no straightforward way to combine the above shell command with a VS Code API call. You could argue that I could just do <code>Ctrl+V</code> after the <code>xclip</code> stage, but anything less than full automation is for peasants.</p>
@@ -133,38 +76,27 @@
 <p>The end result was pretty neat I thought. I finally could enter the date with a single key combination (<code>Ctrl+Alt+D</code>) :D. You can find the code <a href="https://github.com/parth-paradkar/ClipDate">here</a>.</p>
 <p>While the extension is pretty lame, I learned a little bit about the VS Code API and how to use it to build an extension. I also learned to test and publish the extension. Not a bad use of an empty Monday evening :)</p>
 
-			</div>
+		</section>
 
-			<div class="tags">
-				
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
 					
-						<ul class="flat">
-							
-							<li><a href="/tags/tech">tech</a></li>
-							
-						</ul>
+					<li><a href="/tags/tech">tech</a></li>
 					
-				
-			</div><div id="disqus_thread"></div>
-<script>
-    
-
-    
-
-    (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://thescriptninja-github-io-2.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Copyright notice |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+<hr><a class="soc" href="https://github.com/parth-paradkar" title="Github"><i data-feather="github"></i></a>|<a class="soc" href="https://twitter.com/parthparadkar_" title="Twitter"><i data-feather="twitter"></i></a>|<a class="soc" href="https://www.linkedin.com/in/parth-paradkar/" title="LinkedIn"><i data-feather="linkedin"></i></a>|⚡️
+	2021  © Copyright notice |  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+</footer>
 
 
 <script type="application/javascript">
@@ -177,6 +109,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
+
+<script>
+      feather.replace()
+</script></div>
+    </body>
 </html>

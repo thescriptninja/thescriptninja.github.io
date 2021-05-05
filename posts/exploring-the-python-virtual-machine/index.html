@@ -1,111 +1,54 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Exploring CPython</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="Exploring CPython">
-<meta itemprop="description" content="Studying the Python Virtual machine">
-<meta itemprop="datePublished" content="2021-01-18T23:53:27+05:30" />
-<meta itemprop="dateModified" content="2021-01-18T23:53:27+05:30" />
-<meta itemprop="wordCount" content="1426">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Exploring CPython - Parth Paradkar</title><meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-<meta itemprop="keywords" content="tech,python," />
-
-	<title>Parth Paradkar</title>
-	<meta name="title" content="Parth Paradkar">
-	<meta name="description" content="Studying the Python Virtual machine">
-
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Exploring CPython" />
+<meta property="og:description" content="Studying the Python Virtual machine" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/" />
+<meta property="article:published_time" content="2021-01-18T23:53:27+05:30" />
+<meta property="article:modified_time" content="2021-01-18T23:53:27+05:30" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Exploring CPython"/>
+<meta name="twitter:description" content="Studying the Python Virtual machine"/>
+<script src="https://parth-paradkar.github.io/js/feather.min.js"></script>
 	
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://parth-paradkar.github.io/">
-	<meta property="og:title" content="Parth Paradkar">
-	<meta property="og:description" content="Studying the Python Virtual machine">
-	<meta property="og:image" content="https://parth-paradkar.github.io/img/card.jpg">
-
+	<link href="https://parth-paradkar.github.io/css/fonts.css" rel="stylesheet">
 	
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://parth-paradkar.github.io/">
-	<meta property="twitter:title" content="Parth Paradkar">
-	<meta property="twitter:description" content="Studying the Python Virtual machine">
-	<meta property="twitter:image" content="https://parth-paradkar.github.io/img/card.jpg">
-
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/main.css" />
-
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://parth-paradkar.github.io/css/dark.css" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-		<script src="https://parth-paradkar.github.io/js/main.js"></script>
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://parth-paradkar.github.io/css/dark.css"  />
+	
+	
 </head>
-
 <body>
-	<div class="container wrapper">
-		<div class="header">
-	
-		<div class="avatar">
-			<a href="https://parth-paradkar.github.io/">
-				<img src="https://github.com/parth-paradkar.png" alt="Parth Paradkar" />
-			</a>
-		</div>
-	
-	<h1 class="site-title"><a href="https://parth-paradkar.github.io/">Parth Paradkar</a></h1>
-	<div class="site-description"><p>Thoughts and musings</p><nav class="nav social">
-			<ul class="flat"><li><a href="https://github.com/parth-paradkar" title="Github"><i data-feather="github"></i></a></li><li><a href="https://twitter.com/parthparadkar_" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/parth-paradkar/" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><span class="scheme-toggle"><a href="#" id="scheme-toggle"></a></li>
-			</ul>
-		</nav>
-		
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://parth-paradkar.github.io/">Parth Paradkar</a>
 	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-			<li>
-				<a href="/">Home</a>
-			</li>
-			
-			<li>
-				<a href="/notes">Notes</a>
-			</li>
-			
-			<li>
-				<a href="/tags">Tags</a>
-			</li>
-			
-			<li>
-				<a href="/cv.pdf">CV</a>
-			</li>
-			
-			<li>
-				<a href="/about">About</a>
-			</li>
-			
-		</ul>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/tags">Tags</a>
+		
+		<a href="/cv.pdf">CV</a>
+		
+		<a href="/about">About</a>
+		
 	</nav>
-</div>
+</header>
 
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Exploring CPython</h1>
+			<div class="meta">Posted on Jan 18, 2021</div>
+		</div>
+		
 
-		<div class="post">
-			<div class="post-header">
-				
-					<div class="meta">
-						<div class="date">
-							<span class="day">18</span>
-							<span class="rest">Jan 2021</span>
-						</div>
-					</div>
-				
-				<div class="matter">
-					<h1 class="title">Exploring CPython</h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<h2 id="inspiration">Inspiration</h2>
+		<section class="body">
+			<h2 id="inspiration">Inspiration</h2>
 <p>Last year, I came across <a href="https://github.com/vasanthk/how-web-works">this</a> GitHub repo, which describes how the internet works in great detail by going through everything that happens from when the user enters a character in the browser to when the web page is displayed. I liked the idea of taking something commonplace and going very deep into its workings. I wondered if the same could be done for a user running a very simple Python script. What followed was a deep dive into the <a href="https://github.com/python/cpython">CPython</a> project (the most popular Python implementation written in C) and a few months later, I have <em>some</em> idea as to what happens behind the scenes. I have also gained further understanding by drawing parallels between the CPython concepts and the coursework in my current semester. I shall elaborate my understanding in this blog post.</p>
 <h2 id="the-python-_virtual-machine_">The Python <em>Virtual Machine</em>?</h2>
 <p>The Python virtual machine is a program that acts like a <em>virtual CPU</em>.</p>
@@ -115,21 +58,21 @@
 <h2 id="show-me-the-code">Show me the code!</h2>
 <p>You can inspect bytecode in Python yourself too.</p>
 <p>Let us write a simple function <code>add_nums</code></p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#080;font-weight:bold">def</span> <span style="color:#06b;font-weight:bold">add_nums</span>(a, b):
-    c = a + b
-    <span style="color:#080;font-weight:bold">return</span> c
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_nums</span>(a, b):
+    c <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b
+    <span style="color:#66d9ef">return</span> c
 </code></pre></div><p>Save this in a file called <code>add.py</code> and run it in interactive mode. Try inspecting the <code>add_nums</code> object as shown below:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python -i add.py
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python -i add.py
 &gt;&gt; add_nums.__code__.co_code
 </code></pre></div><p>Some bytes are printed out.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">b&#39;|\x00|\x01\x17\x00}\x02|\x02S\x00&#39;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">b&#39;|\x00|\x01\x17\x00}\x02|\x02S\x00&#39;
 </code></pre></div><p>This is the compiled bytecode that the Python VM runs when it executes this particular function. You can call this is the &lsquo;machine language&rsquo; of the CPython VM. (This is NOT the binary code run by the CPU. Only the CPython VM understands this).</p>
 <p>But you may ask now that if <em>this</em> is the machine code, where are the Assembly language equivalent instructions, that are understandable by humans. To get this in a readable format, we use the <a href="https://docs.python.org/3/library/dis.html">dis</a> module in Python, which is used as a <a href="https://en.wikipedia.org/wiki/Disassembler">disassembler</a>.</p>
 <p>In the same interactive shell above, run the following code</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">&gt;&gt;&gt; <span style="color:#080;font-weight:bold">import</span> <span style="color:#b06;font-weight:bold">dis</span>
-&gt;&gt;&gt; dis.dis(add_nums.__code__.co_code)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> dis
+<span style="color:#f92672">&gt;&gt;&gt;</span> dis<span style="color:#f92672">.</span>dis(add_nums<span style="color:#f92672">.</span>__code__<span style="color:#f92672">.</span>co_code)
 </code></pre></div><p>You will see this output:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">0 LOAD_FAST                0 (0)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">0 LOAD_FAST                0 (0)
 2 LOAD_FAST                1 (1)
 4 BINARY_ADD
 6 STORE_FAST               2 (2)
@@ -141,28 +84,28 @@
 <p>I won&rsquo;t go into how Python code is compiled into bytecode (done in <a href="https://github.com/python/cpython/blob/master/Python/compile.c">Python/compile.c</a>). I&rsquo;ll try elaborating a little about the runtime and the interpreter loop.</p>
 <p>The CPython VM is a <a href="https://en.wikipedia.org/wiki/Stack_machine">stack machine</a>, which means that temporary values used during execution like variables and constants are stored and accessed from a stack (in LIFO manner). The stack pointer points to the top of the stack, which is manipulated when values are pushed or popped from the stack. The pointer is defined <a href="https://github.com/python/cpython/blob/998ae1fa3fb05a790071217cf8f6ae3a928da13f/Python/ceval.c#L995">here</a>.<a href="https://github.com/python/cpython/blob/master/Python/ceval.c#L1190-L1236">These lines</a> define macros for some common stack operations.</p>
 <p>The main interpreter loop can be found on <a href="https://github.com/python/cpython/blob/master/Python/ceval.c#L1507">this</a> line in the <code>Python/ceval.c</code> file. The loop takes in one opcode at a time from the thread and executes it. <a href="https://github.com/python/cpython/blob/master/Python/ceval.c#L1606">This</a> switch statement defines the behavior for each opcode. For example, the code for the <code>BINARY_MULTIPLY</code> opcode (which multiplies two numbers) is:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#080;font-weight:bold">case</span> <span style="color:#06b;font-weight:bold">TARGET</span>(BINARY_MULTIPLY): {
-    <span style="color:#888">// Values to be multiplied are the two topmost elements on the stack
-</span><span style="color:#888"></span>    PyObject *right = POP(); <span style="color:#888">// Pops value from the top of the stack
-</span><span style="color:#888"></span>    PyObject *left = TOP(); <span style="color:#888">// Copies the top value from stack without popping
-</span><span style="color:#888"></span>    PyObject *res = PyNumber_Multiply(left, right);
-    Py_DECREF(left); <span style="color:#888">// Decrements reference count for garbage collection
-</span><span style="color:#888"></span>    Py_DECREF(right); <span style="color:#888">// Decrements reference count for garbage collection
-</span><span style="color:#888"></span>    SET_TOP(res); <span style="color:#888">// Sets the top of the stack to the multiplied value (Overwrite)
-</span><span style="color:#888"></span>    <span style="color:#080;font-weight:bold">if</span> (res == <span style="color:#038">NULL</span>)
-        <span style="color:#080;font-weight:bold">goto</span> error;
-    DISPATCH(); <span style="color:#888">// continue to the next opcode
-</span><span style="color:#888"></span>}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">case</span> <span style="color:#a6e22e">TARGET</span>(BINARY_MULTIPLY)<span style="color:#f92672">:</span> {
+    <span style="color:#75715e">// Values to be multiplied are the two topmost elements on the stack
+</span><span style="color:#75715e"></span>    PyObject <span style="color:#f92672">*</span>right <span style="color:#f92672">=</span> POP(); <span style="color:#75715e">// Pops value from the top of the stack
+</span><span style="color:#75715e"></span>    PyObject <span style="color:#f92672">*</span>left <span style="color:#f92672">=</span> TOP(); <span style="color:#75715e">// Copies the top value from stack without popping
+</span><span style="color:#75715e"></span>    PyObject <span style="color:#f92672">*</span>res <span style="color:#f92672">=</span> PyNumber_Multiply(left, right);
+    Py_DECREF(left); <span style="color:#75715e">// Decrements reference count for garbage collection
+</span><span style="color:#75715e"></span>    Py_DECREF(right); <span style="color:#75715e">// Decrements reference count for garbage collection
+</span><span style="color:#75715e"></span>    SET_TOP(res); <span style="color:#75715e">// Sets the top of the stack to the multiplied value (Overwrite)
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (res <span style="color:#f92672">==</span> NULL)
+        <span style="color:#66d9ef">goto</span> error;
+    DISPATCH(); <span style="color:#75715e">// continue to the next opcode
+</span><span style="color:#75715e"></span>}
 </code></pre></div><h2 id="more-examples">More examples</h2>
 <p>Let us see some more examples.</p>
 <p>Modify the <code>add_nums</code> function to include a conditional:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#080;font-weight:bold">def</span> <span style="color:#06b;font-weight:bold">add_nums</span>(a, b):
-    c = a + b
-    <span style="color:#080;font-weight:bold">if</span> c % <span style="color:#00d;font-weight:bold">2</span> == <span style="color:#00d;font-weight:bold">0</span> <span style="color:#080">and</span> c % <span style="color:#00d;font-weight:bold">3</span> == <span style="color:#00d;font-weight:bold">0</span>:
-        <span style="color:#080;font-weight:bold">return</span> <span style="color:#00d;font-weight:bold">0</span>
-    <span style="color:#080;font-weight:bold">return</span> c
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_nums</span>(a, b):
+    c <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b
+    <span style="color:#66d9ef">if</span> c <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">return</span> c
 </code></pre></div><p>As in the earlier example, we look at the disassembled bytecode.</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">	      0 LOAD_FAST                0 (0)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">	      0 LOAD_FAST                0 (0)
           2 LOAD_FAST                1 (1)
           4 BINARY_ADD
           6 STORE_FAST               2 (2)
@@ -185,13 +128,13 @@
 
 </code></pre></div><p>While this looks pretty scary, the important part to note is the two <code>POP_JUMP_IF_FALSE</code> statements. These statements tell the VM to make a jump to a particular instruction and pop the boolean from top of the stack. The first <code>POP_JUMP_IF_FALSE</code> instruction evaluates the boolean value on top of the stack (produced by <code>COMPARE_OP</code>) and directly makes a jump to the instruction with offset <code>36</code>, that is the penultimate instruction in this series. This is an optimization as the needless evaluation of the second boolean expression is saved (if the first value is false in AND, there is no need to evaluate the second value).</p>
 <p>Let us include a loop in the function and see what happens</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#080;font-weight:bold">def</span> <span style="color:#06b;font-weight:bold">add_nums</span>(a, b):
-    c = a + b
-    <span style="color:#080;font-weight:bold">while</span> c &gt; a / <span style="color:#00d;font-weight:bold">2</span>:
-        c = c - <span style="color:#00d;font-weight:bold">1</span>
-    <span style="color:#080;font-weight:bold">return</span> c
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_nums</span>(a, b):
+    c <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b
+    <span style="color:#66d9ef">while</span> c <span style="color:#f92672">&gt;</span> a <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>:
+        c <span style="color:#f92672">=</span> c <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">return</span> c
 </code></pre></div><p>The disassembled bytecode is:</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">		  0 LOAD_FAST                0 (0)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">		  0 LOAD_FAST                0 (0)
           2 LOAD_FAST                1 (1)
           4 BINARY_ADD
           6 STORE_FAST               2 (2)
@@ -220,40 +163,29 @@
 <p>Leave any critique/thoughts/suggestions in the comments or DMs. I would really appreciate it :)</p>
 <p>Thanks for reading!</p>
 
-			</div>
+		</section>
 
-			<div class="tags">
-				
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
 					
-						<ul class="flat">
-							
-							<li><a href="/tags/tech">tech</a></li>
-							
-							<li><a href="/tags/python">python</a></li>
-							
-						</ul>
+					<li><a href="/tags/tech">tech</a></li>
 					
-				
-			</div><div id="disqus_thread"></div>
-<script>
-    
-
-    
-
-    (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://thescriptninja-github-io-2.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  © Copyright notice |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
+					<li><a href="/tags/python">python</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+<hr><a class="soc" href="https://github.com/parth-paradkar" title="Github"><i data-feather="github"></i></a>|<a class="soc" href="https://twitter.com/parthparadkar_" title="Twitter"><i data-feather="twitter"></i></a>|<a class="soc" href="https://www.linkedin.com/in/parth-paradkar/" title="LinkedIn"><i data-feather="linkedin"></i></a>|⚡️
+	2021  © Copyright notice |  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+</footer>
 
 
 <script type="application/javascript">
@@ -266,6 +198,9 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
-</body>
+
+<script>
+      feather.replace()
+</script></div>
+    </body>
 </html>
