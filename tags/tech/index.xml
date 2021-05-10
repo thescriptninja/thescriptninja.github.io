@@ -6,21 +6,20 @@
     <description>Recent content in tech on Parth Paradkar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Tue, 04 May 2021 10:39:42 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://parth-paradkar.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building a VS Code Extension</title>
+      <title>Building a VS Code extension</title>
       <link>https://parth-paradkar.github.io/posts/building-a-vs-code-extension/</link>
-      <pubDate>Tue, 04 May 2021 10:39:42 +0530</pubDate>
+      <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://parth-paradkar.github.io/posts/building-a-vs-code-extension/</guid>
-      <description>Motivation I have been writing TILs(short notes about what I learned each day) in Dendron for a few days now, for which I need to specify the date of each TIL . Since looking at the date in the top right corner and typing a few characters out was excruciatingly painful, I used to get this from the date shell command. This required me to open a terminal in VS Code (I usually don&amp;rsquo;t have one open when I am writing notes), enter the command, copy the output and paste it where I required it.</description>
+      <description>Motivation I have been writing TILs(short notes about what I learned each day) in Dendron for a few days now, for which I need to specify the date of each TIL. Since looking at the date in the top right corner and typing a few characters out was excruciatingly painful, I used to get this from the date shell command. This required me to open a terminal in VS Code (I usually don’t have one open when I am writing notes), enter the command, copy the output and paste it where I required it.</description>
     </item>
     
     <item>
       <title>Exploring CPython</title>
       <link>https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/</link>
-      <pubDate>Mon, 18 Jan 2021 23:53:27 +0530</pubDate>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/</guid>
       <description>Inspiration Last year, I came across this GitHub repo, which describes how the internet works in great detail by going through everything that happens from when the user enters a character in the browser to when the web page is displayed. I liked the idea of taking something commonplace and going very deep into its workings. I wondered if the same could be done for a user running a very simple Python script.</description>
@@ -29,43 +28,11 @@
     <item>
       <title>Shifting to Hugo</title>
       <link>https://parth-paradkar.github.io/posts/shift-to-hugo/</link>
-      <pubDate>Sat, 09 Jan 2021 11:14:30 +0530</pubDate>
+      <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://parth-paradkar.github.io/posts/shift-to-hugo/</guid>
       <description>After having used Jekyll for a long time, I have shifted to Hugo for this GitHub pages blog.
 What is Hugo? Hugo, just like Jekyll, is a static site generator. While Jekyll is written in Ruby, Hugo is written in Go. These generators source their content from markdown files. They use templating engines to generate the required HTML, CSS and JS files according to the logic described in the config file and templates.</description>
-    </item>
-    
-    <item>
-      <title>CDC Internship Process 2020 - Cisco</title>
-      <link>https://parth-paradkar.github.io/posts/cdc-internship-process-2020-cisco/</link>
-      <pubDate>Mon, 30 Nov 2020 14:05:41 +0530</pubDate>
-      
-      <guid>https://parth-paradkar.github.io/posts/cdc-internship-process-2020-cisco/</guid>
-      <description>This is an account of my experience of the CDC internship process 2020-21. Undergraduate students at IIT KGP need to complete an internship at the end of their pre-final year. Career Development Cell (CDC) manages the process for the same.
- Disclaimer (for people who tend to generalize):
-I was shortlisted for only one company (Cisco) and I got an internship offer from that company itself. So whatever advice/information that follows is probably not all-encompassing and fully informed.</description>
-    </item>
-    
-    <item>
-      <title>Understanding correlation between data features</title>
-      <link>https://parth-paradkar.github.io/posts/understanding-correlation-between-data-features/</link>
-      <pubDate>Mon, 20 Jan 2020 01:23:54 +0530</pubDate>
-      
-      <guid>https://parth-paradkar.github.io/posts/understanding-correlation-between-data-features/</guid>
-      <description>Understanding correlation One of the main questions I faced while exploring data was that how can I measure the strength of the relationship between two features of the data.
-For example, how is the price of a car related with its mileage? How do we quantify their interdependence? How strong is the relationship?
-I attempt to explore this mathematically in this notebook.
-# Importing the required libraries import pandas as pd import seaborn as sns We shall consider a dataset that gives the specifications of cars and their prices.</description>
-    </item>
-    
-    <item>
-      <title>My experiences in programming - Year One</title>
-      <link>https://parth-paradkar.github.io/posts/my-experiences-in-programming/</link>
-      <pubDate>Sun, 21 Jul 2019 11:28:18 +0530</pubDate>
-      
-      <guid>https://parth-paradkar.github.io/posts/my-experiences-in-programming/</guid>
-      <description>As another year at college begins with all its feverish energy and stress, I am compelled to reminisce about the beautiful quagmire of open source programming I found myself in about a year ago. I remember the time I started learning C as a part of my first year course. It was not my first experience in programming but all I had done before that was HTML and I will go out on a limb here to say that it was not really programming (sorry frontend guys).</description>
     </item>
     
   </channel>

@@ -8,33 +8,33 @@
 <meta property="og:description" content="Porting Github Pages blog from Jekyll to Hugo" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://parth-paradkar.github.io/posts/shift-to-hugo/" />
-<meta property="article:published_time" content="2021-01-09T11:14:30+05:30" />
-<meta property="article:modified_time" content="2021-01-09T11:14:30+05:30" />
+<meta property="article:published_time" content="2021-01-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-09T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Shifting to Hugo"/>
 <meta name="twitter:description" content="Porting Github Pages blog from Jekyll to Hugo"/>
-<script src="https://parth-paradkar.github.io/js/feather.min.js"></script>
+<script src="https://parth-paradkar.github.iojs/feather.min.js"></script>
 	
-	<link href="https://parth-paradkar.github.io/css/fonts.css" rel="stylesheet">
+	<link href="https://parth-paradkar.github.iocss/fonts.css" rel="stylesheet">
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://parth-paradkar.github.io/css/dark.css"  />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.iocss/main.css" /><link rel="stylesheet" type="text/css" href="https://parth-paradkar.github.iocss/dark.css" media="(prefers-color-scheme: dark)" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://parth-paradkar.github.io/">Parth Paradkar</a>
+		<a href="https://parth-paradkar.github.io">Parth Paradkar</a>
 	</div>
 	<nav>
 		
 		<a href="/">Home</a>
 		
-		<a href="/tags">Tags</a>
-		
-		<a href="/cv.pdf">CV</a>
+		<a href="/posts">All posts</a>
 		
 		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
 		
 	</nav>
 </header>
@@ -49,19 +49,19 @@
 
 		<section class="body">
 			<p>After having used Jekyll for a long time, I have shifted to Hugo for this GitHub pages blog.</p>
-<h3 id="what-is-hugo">What is Hugo?</h3>
+<h2 id="what-is-hugo">What is Hugo?</h2>
 <p><a href="https://gohugo.io/">Hugo</a>, just like <a href="https://jekyllrb.com/">Jekyll</a>, is a static site generator. While Jekyll is written in Ruby, Hugo is written in Go. These generators source their content from markdown files. They use templating engines to generate the required HTML, CSS and JS files according to the logic described in the config file and templates. Jekyll uses the <a href="https://shopify.github.io/liquid/">Liquid</a> templating language, while Hugo uses Go for templating.</p>
-<h3 id="why-though">Why though?</h3>
+<h2 id="why-though">Why though?</h2>
 <p>The decision to shift to Hugo was a totally impulsive one. I was sitting at my laptop one day idly, after a series of exhausting online classes. There is something about being bored and idle that gives rise to restlessness. I had my blog open in one of the tabs on my browser and on a whim, decided to change it completely. I was bored with how it looked and more importantly, I needed something to do.</p>
 <p>I had heard from some of my friends that Hugo was a good option, so I decided to look into it. The setup was way easier than expected. It literally only took 2 steps to get it running. I eventually selected the <a href="https://github.com/knadh/hugo-ink">hugo-ink</a> theme and modified it to my requirements. Changing the markdown files took minimal effort that was easily automated with a Python script.</p>
 <p>I am finding Hugo to be better than Jekyll because of the following reasons:</p>
-<h4 id="1-smooth-local-setup">1. Smooth local setup</h4>
+<h2 id="smooth-local-setup">Smooth local setup</h2>
 <p>Setting up Hugo locally is dead easy. As I am running Fedora, I installed it from source. I had a sample website up in no time. The CLI is quite easy to use as compared to Jekyll. It comes with <a href="https://gohugo.io/getting-started/usage/#livereload">LiveReload</a> built-in. As Hugo builds the pages insanely fast, there is rarely any lag in the changes getting reflected. One of the major headaches I faced while managing the blog in Jekyll was the local setup. Hugo solved these by making the experience much more seamless.</p>
-<h4 id="2-inbuilt-support-for-disqus-google-analytics">2. Inbuilt support for Disqus, Google Analytics</h4>
+<h2 id="inbuilt-support-for-disqus-google-analytics">Inbuilt support for Disqus, Google Analytics</h2>
 <p>In the previous version of my blog, I had configured the Facebook comments plugin. It was quite buggy and took ages to load. I shifted to Disqus and it is working quite smoothly with a smaller render time. To add the Disqus comment section, I only had to add the <code>short name</code> to the <code>config.toml</code> file. The rest was taken care by Hugo.</p>
-<h4 id="3-more-and-better-themes-to-select-from">3. More and better themes to select from</h4>
+<h2 id="more-and-better-themes-to-select-from">More and better themes to select from</h2>
 <p>I found more minimal and simple <a href="https://themes.gohugo.io/">themes for Hugo</a> than I did for Jekyll. After some hunting, I found the Ink theme, which required very little modifications to suit my requirements. This theme also supported changing the theme of the blog (dark/light) which was a huge bonus.</p>
-<h4 id="4-easy-addition-of-tags-and-sections">4. Easy addition of tags and sections</h4>
+<h2 id="easy-addition-of-tags-and-sections">Easy addition of tags and sections</h2>
 <p>In my Jekyll blog, I had to do some hacks to get the functionality of having a separate section for a particular kind of blog posts, where I had to change the rendering logic use in the templates. In Hugo, I can simply create nested folders in the <code>content</code> folder and Hugo will organize the routes accordingly.</p>
 <p>All in all, unless I find something better (looking at you, <a href="https://www.getzola.org/">Zola</a>) and I am seized by a similar random impulse, Hugo is here to stay.</p>
 
@@ -81,31 +81,12 @@
 			
 		</div>
 	</article>
-	<script src="https://utteranc.es/client.js"
-	        repo="parth-paradkar/parth-paradkar.github.io"
-        	issue-term="pathname"
-	        label="comment"
-	        theme="github-dark"
-        	crossorigin="anonymous"
-        	async>
-	</script>
 </main>
 <footer>
-<hr><a class="soc" href="https://github.com/parth-paradkar" title="Github"><i data-feather="github"></i></a>|<a class="soc" href="https://twitter.com/parthparadkar_" title="Twitter"><i data-feather="twitter"></i></a>|<a class="soc" href="https://www.linkedin.com/in/parth-paradkar/" title="LinkedIn"><i data-feather="linkedin"></i></a>|⚡️
-	2021  © Copyright notice |  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+<hr><a class="soc" href="https://github.com/parth-paradkar" title="GitHub"><i data-feather="github"></i></a>|<a class="soc" href="https://twitter.com/parthparadkar_" title="Twitter"><i data-feather="twitter"></i></a>|⚡️
+	2021  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
 </footer>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-179536383-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <script>
       feather.replace()

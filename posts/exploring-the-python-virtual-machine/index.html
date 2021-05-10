@@ -8,33 +8,33 @@
 <meta property="og:description" content="Studying the Python Virtual machine" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/" />
-<meta property="article:published_time" content="2021-01-18T23:53:27+05:30" />
-<meta property="article:modified_time" content="2021-01-18T23:53:27+05:30" />
+<meta property="article:published_time" content="2021-01-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-18T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Exploring CPython"/>
 <meta name="twitter:description" content="Studying the Python Virtual machine"/>
-<script src="https://parth-paradkar.github.io/js/feather.min.js"></script>
+<script src="https://parth-paradkar.github.iojs/feather.min.js"></script>
 	
-	<link href="https://parth-paradkar.github.io/css/fonts.css" rel="stylesheet">
+	<link href="https://parth-paradkar.github.iocss/fonts.css" rel="stylesheet">
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://parth-paradkar.github.io/css/dark.css"  />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.iocss/main.css" /><link rel="stylesheet" type="text/css" href="https://parth-paradkar.github.iocss/dark.css" media="(prefers-color-scheme: dark)" />
 	
 	
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://parth-paradkar.github.io/">Parth Paradkar</a>
+		<a href="https://parth-paradkar.github.io">Parth Paradkar</a>
 	</div>
 	<nav>
 		
 		<a href="/">Home</a>
 		
-		<a href="/tags">Tags</a>
-		
-		<a href="/cv.pdf">CV</a>
+		<a href="/posts">All posts</a>
 		
 		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
 		
 	</nav>
 </header>
@@ -54,49 +54,51 @@
 <p>The Python virtual machine is a program that acts like a <em>virtual CPU</em>.</p>
 <p>A CPU loads instructions from memory and executes them. These instructions are in the form of a series of binary machine codes that are produced after <a href="https://en.wikipedia.org/wiki/Assembly_language">Assembly</a> code is <a href="https://en.wikipedia.org/wiki/Assembly_language#Assembler">assembled</a>. The set of all instructions a processor is able to execute is called its <code>Instruction Set</code>, which is unique to each family of processors (x86, ARM, etc). All code written finally boils down to a series of basic instructions that is placed in memory and is executed by the CPU in a very small amount of time (in the order of nanoseconds, governed by the clock speed).</p>
 <p>So how is this related to how Python works? (It is assumed from this point that we are talking about CPython)</p>
-<p><a href="https://github.com/python/cpython">CPython</a> implements a virtual CPU using C. Python code is first compiled (yes, compiled, not interpreted) into a bytecode (binary)  that consists of a series of &lsquo;opcodes&rsquo; (which can be understood as the Assembly language of the Python VM). As in the case of an actual CPU, these opcodes are executed one-by-one. This compiled code can some times be found in the <code>.pyc</code> files created in the annoying little <code>__pycache__</code> folder you might find in your project directory (ends up in <code>.gitignore</code> mostly).</p>
+<p><a href="https://github.com/python/cpython">CPython</a> implements a virtual CPU using C. Python code is first compiled (yes, compiled, not interpreted) into a bytecode (binary) that consists of a series of ‘opcodes’ (which can be understood as the Assembly language of the Python VM). As in the case of an actual CPU, these opcodes are executed one-by-one. This compiled code can some times be found in the <code>.pyc</code> files created in the annoying little <code>__pycache__</code> folder you might find in your project directory (ends up in <code>.gitignore</code> mostly).</p>
 <h2 id="show-me-the-code">Show me the code!</h2>
 <p>You can inspect bytecode in Python yourself too.</p>
 <p>Let us write a simple function <code>add_nums</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_nums</span>(a, b):
-    c <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b
-    <span style="color:#66d9ef">return</span> c
+   c <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b
+   <span style="color:#66d9ef">return</span> c
 </code></pre></div><p>Save this in a file called <code>add.py</code> and run it in interactive mode. Try inspecting the <code>add_nums</code> object as shown below:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python -i add.py
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ python -i add.py
 &gt;&gt; add_nums.__code__.co_code
 </code></pre></div><p>Some bytes are printed out.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">b&#39;|\x00|\x01\x17\x00}\x02|\x02S\x00&#39;
-</code></pre></div><p>This is the compiled bytecode that the Python VM runs when it executes this particular function. You can call this is the &lsquo;machine language&rsquo; of the CPython VM. (This is NOT the binary code run by the CPU. Only the CPython VM understands this).</p>
+</code></pre></div><p>This is the compiled bytecode that the Python VM runs when it executes this particular function. You can call this is the ‘machine language’ of the CPython VM. (This is NOT the binary code run by the CPU. Only the CPython VM understands this).</p>
 <p>But you may ask now that if <em>this</em> is the machine code, where are the Assembly language equivalent instructions, that are understandable by humans. To get this in a readable format, we use the <a href="https://docs.python.org/3/library/dis.html">dis</a> module in Python, which is used as a <a href="https://en.wikipedia.org/wiki/Disassembler">disassembler</a>.</p>
 <p>In the same interactive shell above, run the following code</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> dis
 <span style="color:#f92672">&gt;&gt;&gt;</span> dis<span style="color:#f92672">.</span>dis(add_nums<span style="color:#f92672">.</span>__code__<span style="color:#f92672">.</span>co_code)
 </code></pre></div><p>You will see this output:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">0 LOAD_FAST                0 (0)
+<pre><code>0 LOAD_FAST                0 (0)
 2 LOAD_FAST                1 (1)
 4 BINARY_ADD
 6 STORE_FAST               2 (2)
 8 LOAD_FAST                2 (2)
-10 RETURN_VALUE
-</code></pre></div><p>Now perhaps, it will start making some sense. If you have read some Assembly code before, the above will look somewhat familiar. Instructions like <code>LOAD_FAST</code>, <code>BINARY_ADD</code> are called <code>opcodes</code>. The numbers to the right are arguments given to them. The leftmost numbers are offsets from the start of the bytecode in number of bytes. Opcodes and their arguments are each 1 byte long, thus causing the offset to increase by 2 after each line.</p>
+10 RETURN_VALUE 
+</code></pre>
+<p>Now perhaps, it will start making some sense. If you have read some Assembly code before, the above will look somewhat familiar. Instructions like <code>LOAD_FAST</code>, <code>BINARY_ADD</code> are called <code>opcodes</code>. The numbers to the right are arguments given to them. The leftmost numbers are offsets from the start of the bytecode in number of bytes. Opcodes and their arguments are each 1 byte long, thus causing the offset to increase by 2 after each line.</p>
 <p>Opcodes are made human-readable by the dis module. A list of opcodes can be found in the <a href="https://github.com/python/cpython/blob/master/Include/opcode.h">Include/opcode.h</a> file. This can be understood as the Instruction Set of the CPython VM. All code that is run in Python comes down to executing a series of these opcodes.</p>
-<h2 id="stack-em-up">Stack &lsquo;em up</h2>
-<p>I won&rsquo;t go into how Python code is compiled into bytecode (done in <a href="https://github.com/python/cpython/blob/master/Python/compile.c">Python/compile.c</a>). I&rsquo;ll try elaborating a little about the runtime and the interpreter loop.</p>
+<h2 id="stack-em-up">Stack ‘em up</h2>
+<p>I won’t go into how Python code is compiled into bytecode (done in <a href="https://github.com/python/cpython/blob/master/Python/compile.c">Python/compile.c</a>). I’ll try elaborating a little about the runtime and the interpreter loop.</p>
 <p>The CPython VM is a <a href="https://en.wikipedia.org/wiki/Stack_machine">stack machine</a>, which means that temporary values used during execution like variables and constants are stored and accessed from a stack (in LIFO manner). The stack pointer points to the top of the stack, which is manipulated when values are pushed or popped from the stack. The pointer is defined <a href="https://github.com/python/cpython/blob/998ae1fa3fb05a790071217cf8f6ae3a928da13f/Python/ceval.c#L995">here</a>.<a href="https://github.com/python/cpython/blob/master/Python/ceval.c#L1190-L1236">These lines</a> define macros for some common stack operations.</p>
 <p>The main interpreter loop can be found on <a href="https://github.com/python/cpython/blob/master/Python/ceval.c#L1507">this</a> line in the <code>Python/ceval.c</code> file. The loop takes in one opcode at a time from the thread and executes it. <a href="https://github.com/python/cpython/blob/master/Python/ceval.c#L1606">This</a> switch statement defines the behavior for each opcode. For example, the code for the <code>BINARY_MULTIPLY</code> opcode (which multiplies two numbers) is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">case</span> <span style="color:#a6e22e">TARGET</span>(BINARY_MULTIPLY)<span style="color:#f92672">:</span> {
-    <span style="color:#75715e">// Values to be multiplied are the two topmost elements on the stack
-</span><span style="color:#75715e"></span>    PyObject <span style="color:#f92672">*</span>right <span style="color:#f92672">=</span> POP(); <span style="color:#75715e">// Pops value from the top of the stack
-</span><span style="color:#75715e"></span>    PyObject <span style="color:#f92672">*</span>left <span style="color:#f92672">=</span> TOP(); <span style="color:#75715e">// Copies the top value from stack without popping
-</span><span style="color:#75715e"></span>    PyObject <span style="color:#f92672">*</span>res <span style="color:#f92672">=</span> PyNumber_Multiply(left, right);
-    Py_DECREF(left); <span style="color:#75715e">// Decrements reference count for garbage collection
-</span><span style="color:#75715e"></span>    Py_DECREF(right); <span style="color:#75715e">// Decrements reference count for garbage collection
-</span><span style="color:#75715e"></span>    SET_TOP(res); <span style="color:#75715e">// Sets the top of the stack to the multiplied value (Overwrite)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (res <span style="color:#f92672">==</span> NULL)
-        <span style="color:#66d9ef">goto</span> error;
-    DISPATCH(); <span style="color:#75715e">// continue to the next opcode
-</span><span style="color:#75715e"></span>}
-</code></pre></div><h2 id="more-examples">More examples</h2>
+<pre><code>case TARGET(BINARY_MULTIPLY): {
+    // Values to be multiplied are the two topmost elements on the stack
+    PyObject *right = POP(); // Pops value from the top of the stack
+    PyObject *left = TOP(); // Copies the top value from stack without popping
+    PyObject *res = PyNumber_Multiply(left, right);
+    Py_DECREF(left); // Decrements reference count for garbage collection
+    Py_DECREF(right); // Decrements reference count for garbage collection
+    SET_TOP(res); // Sets the top of the stack to the multiplied value (Overwrite)
+    if (res == NULL)
+        goto error;
+    DISPATCH(); // continue to the next opcode
+}
+</code></pre>
+<h2 id="more-examples">More examples</h2>
 <p>Let us see some more examples.</p>
 <p>Modify the <code>add_nums</code> function to include a conditional:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_nums</span>(a, b):
@@ -105,7 +107,7 @@
         <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
     <span style="color:#66d9ef">return</span> c
 </code></pre></div><p>As in the earlier example, we look at the disassembled bytecode.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">	      0 LOAD_FAST                0 (0)
+<pre><code>          0 LOAD_FAST                0 (0)
           2 LOAD_FAST                1 (1)
           4 BINARY_ADD
           6 STORE_FAST               2 (2)
@@ -125,8 +127,8 @@
          34 RETURN_VALUE
     &gt;&gt;   36 LOAD_FAST                2 (2)
          38 RETURN_VALUE
-
-</code></pre></div><p>While this looks pretty scary, the important part to note is the two <code>POP_JUMP_IF_FALSE</code> statements. These statements tell the VM to make a jump to a particular instruction and pop the boolean from top of the stack. The first <code>POP_JUMP_IF_FALSE</code> instruction evaluates the boolean value on top of the stack (produced by <code>COMPARE_OP</code>) and directly makes a jump to the instruction with offset <code>36</code>, that is the penultimate instruction in this series. This is an optimization as the needless evaluation of the second boolean expression is saved (if the first value is false in AND, there is no need to evaluate the second value).</p>
+</code></pre>
+<p>While this looks pretty scary, the important part to note is the two <code>POP_JUMP_IF_FALSE</code> statements. These statements tell the VM to make a jump to a particular instruction and pop the boolean from top of the stack. The first <code>POP_JUMP_IF_FALSE</code> instruction evaluates the boolean value on top of the stack (produced by <code>COMPARE_OP</code>) and directly makes a jump to the instruction with offset <code>36</code>, that is the penultimate instruction in this series. This is an optimization as the needless evaluation of the second boolean expression is saved (if the first value is false in AND, there is no need to evaluate the second value).</p>
 <p>Let us include a loop in the function and see what happens</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_nums</span>(a, b):
     c <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b
@@ -134,34 +136,32 @@
         c <span style="color:#f92672">=</span> c <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
     <span style="color:#66d9ef">return</span> c
 </code></pre></div><p>The disassembled bytecode is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">		  0 LOAD_FAST                0 (0)
-          2 LOAD_FAST                1 (1)
-          4 BINARY_ADD
-          6 STORE_FAST               2 (2)
-    &gt;&gt;    8 LOAD_FAST                2 (2)
-         10 LOAD_FAST                0 (0)
-         12 LOAD_CONST               1 (1)
-         14 BINARY_TRUE_DIVIDE
-         16 COMPARE_OP               4 (&gt;)
-         18 POP_JUMP_IF_FALSE       30
-         20 LOAD_FAST                2 (2)
-         22 LOAD_CONST               2 (2)
-         24 BINARY_SUBTRACT
-         26 STORE_FAST               2 (2)
-         28 JUMP_ABSOLUTE            8
-    &gt;&gt;   30 LOAD_FAST                2 (2)
-         32 RETURN_VALUE
-
-</code></pre></div><p>Again, this looks very tedious to read. However, if you go through each line, you will see that most operations are just simple stack operations like loading, pop, store, etc. It is interesting to see how the loop has been implemented using <code>JUMP</code> opcodes. The <code>POP_JUMP_IF_FALSE</code> governs the exit condition of the loop, where it jumps out of the loop to offset <code>30</code> if the boolean after the comparison is evaluated to be false. <code>JUMP_ABSOLUTE</code> causes the &lsquo;looping&rsquo; behavior, by returning control to the top of the loop again (offset <code>8</code>).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    		0 LOAD_FAST                0 (0)
+              2 LOAD_FAST                1 (1)
+              4 BINARY_ADD
+              6 STORE_FAST               2 (2)
+        &gt;&gt;    8 LOAD_FAST                2 (2)
+             10 LOAD_FAST                0 (0)
+             12 LOAD_CONST               1 (1)
+             14 BINARY_TRUE_DIVIDE
+             16 COMPARE_OP               4 (&gt;)
+             18 POP_JUMP_IF_FALSE       30
+             20 LOAD_FAST                2 (2)
+             22 LOAD_CONST               2 (2)
+             24 BINARY_SUBTRACT
+             26 STORE_FAST               2 (2)
+             28 JUMP_ABSOLUTE            8
+        &gt;&gt;   30 LOAD_FAST                2 (2)
+             32 RETURN_VALUE
+</code></pre></div><p>Again, this looks very tedious to read. However, if you go through each line, you will see that most operations are just simple stack operations like loading, pop, store, etc. It is interesting to see how the loop has been implemented using <code>JUMP</code> opcodes. The <code>POP_JUMP_IF_FALSE</code> governs the exit condition of the loop, where it jumps out of the loop to offset <code>30</code> if the boolean after the comparison is evaluated to be false. <code>JUMP_ABSOLUTE</code> causes the ‘looping’ behavior, by returning control to the top of the loop again (offset <code>8</code>).</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>If you made it this far, you might be wondering, &ldquo;This is all nice, but I will never put this to actual use. What&rsquo;s the use of knowing this?&rdquo;. To be honest, even I haven&rsquo;t found the answer to that question :P. The best I can offer is some relief to the curiosity about the internal workings of Python :D</p>
+<p>If you made it this far, you might be wondering, “This is all nice, but I will never put this to actual use. What’s the use of knowing this?”. To be honest, even I haven’t found the answer to that question :P. The best I can offer is some relief to the curiosity about the internal workings of Python :D</p>
 <p>A few good resources I have found related to this:</p>
 <p><a href="https://www.youtube.com/watch?v=XGF3Qu4dUqk">PyCon 2012 talk by Larry Hastings</a></p>
 <p><a href="https://stackoverflow.com/a/2998544">This StackOverflow answer</a> about compiled vs interpreted</p>
-<p>The book &ldquo;Inside the Python Virtual Machine&rdquo; by Obi Ike-Nwosu</p>
+<p>The book “Inside the Python Virtual Machine” by Obi Ike-Nwosu</p>
 <p><a href="https://tech.blog.aknin.name/2010/04/02/pythons-innards-introduction/">This series of blogposts</a></p>
 <p>Leave any critique/thoughts/suggestions in the comments or DMs. I would really appreciate it :)</p>
-<p>Thanks for reading!</p>
 
 		</section>
 
@@ -173,39 +173,18 @@
 					
 					<li><a href="/tags/tech">tech</a></li>
 					
-					<li><a href="/tags/python">python</a></li>
-					
 				</ul>
 			</nav>
 			
 			
 		</div>
 	</article>
-	<script src="https://utteranc.es/client.js"
-	        repo="parth-paradkar/parth-paradkar.github.io"
-        	issue-term="pathname"
-	        label="comment"
-	        theme="github-dark"
-        	crossorigin="anonymous"
-        	async>
-	</script>
 </main>
 <footer>
-<hr><a class="soc" href="https://github.com/parth-paradkar" title="Github"><i data-feather="github"></i></a>|<a class="soc" href="https://twitter.com/parthparadkar_" title="Twitter"><i data-feather="twitter"></i></a>|<a class="soc" href="https://www.linkedin.com/in/parth-paradkar/" title="LinkedIn"><i data-feather="linkedin"></i></a>|⚡️
-	2021  © Copyright notice |  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+<hr><a class="soc" href="https://github.com/parth-paradkar" title="GitHub"><i data-feather="github"></i></a>|<a class="soc" href="https://twitter.com/parthparadkar_" title="Twitter"><i data-feather="twitter"></i></a>|⚡️
+	2021  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
 </footer>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-179536383-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <script>
       feather.replace()
