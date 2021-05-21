@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Middle Click in X - Parth Paradkar</title><meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Middle Click in X" />
+<meta property="og:description" content="Input devices and selections" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://parth-paradkar.github.io/posts/middle-click-in-x/" />
+<meta property="article:published_time" content="2021-05-21T13:03:28+05:30" />
+<meta property="article:modified_time" content="2021-05-21T13:03:28+05:30" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Middle Click in X"/>
+<meta name="twitter:description" content="Input devices and selections"/>
+<script src="https://parth-paradkar.github.io/js/feather.min.js"></script>
+	
+	<link href="https://parth-paradkar.github.io/css/fonts.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://parth-paradkar.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://parth-paradkar.github.io/">Parth Paradkar</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Middle Click in X</h1>
+			<div class="meta">Posted on May 21, 2021</div>
+		</div>
+		
+
+		<section class="body">
+			<p>A very useful and unique feature of the ThinkPad is the TrackPoint (red dot in the picture below), which is used to control the mouse pointer. It works through applying varying amounts of pressure in the direction of movement (more pressure, faster movement). <a href="https://www.theverge.com/circuitbreaker/2020/6/30/21292182/thinkpad-trackpoint-mouse-nub-button-trackpad-challenges-design-user-input">While it isn&rsquo;t popular</a>, it has won me over to the point that I find using the normal touchpad inconvenient. The biggest advantage for me is that I don&rsquo;t need to move my hand too far from the keyboard to scroll/click.</p>
+<p><img src="/img/trackpoint.jpeg" alt="trackpoint"></p>
+<p>The TrackPoint and the middle button can be used simultaneously to scroll. <em>Keeping the middle button pressed</em>, we can scroll in the direction we want to using the TrackPoint. While convenient, this produces a weird behavior in the <a href="https://en.wikipedia.org/wiki/X_Window_System">X window system</a>. In X, the text selection from any window is pasted into any other window (or the same window) when the middle button is pressed. This results in pieces of previously-selected text getting pasted accidentally in awkward places while scrolling. For instance,</p>
+<p><img src="/img/mistake.png" alt="mistake"></p>
+<p>Not good.</p>
+<p>I tolerated this for a long time, even with unintended words appearing in committed code (aaargh!). Last week, when such a goof up happened in a presentation I gave to ~40 people, I had had it. This feature had now become a bug for me.</p>
+<h3 id="where-does-selected-text-go">Where does selected text go?</h3>
+<p>A way for inter-client communication in X is through selections. When text is selected in any window, it is stored in the <a href="https://wiki.x.org/wiki/">Xorg</a> server and identified by an <code>atom</code> (a &lsquo;name&rsquo;). While there can be an arbitrary number of selections, the important ones are the <code>PRIMARY</code> selection and the <code>clipboard</code> selection.</p>
+<p>Each selection is owned by a client (a particular window). When the text in a particular selection is to be pasted in another window, it asks the server for that selection using the atom used to identified it.  The server then refers the request to the window that owns that selection. The window responds with the text and it can then be pasted.</p>
+<p>On selecting text in a window with a cursor, the ownership of <code>PRIMARY</code> selection is transferred to the current window, with its value as the selected text. Text is moved to the <code>clipboard</code> selection on an explicit copy instruction (<code>Ctrl+C</code> etc). When the middle button on the mouse is clicked, the <code>PRIMARY</code> selection is pasted in the current window.</p>
+<p><img src="/img/middle-click-paste.gif" alt="middle-click-paste"></p>
+<p>Unfortunately, this cannot be disabled globally.</p>
+<h3 id="mapping-devices-to-the-display">Mapping devices to the display</h3>
+<p>One way of working this problem out would be to nuke the middle click itself.</p>
+<p>For a input device to interact with X, the physical device buttons are mapped to logical buttons. The logical buttons are provided by the server to the clients that need to use them (References: <a href="https://who-t.blogspot.com/2009/06/button-mapping-in-x.html">1</a> <a href="https://who-t.blogspot.com/2010/07/input-event-processing-in-x.html">2</a>). We can use the <code>xinput</code> tool to look at the devices and their mappings.</p>
+<p><img src="/img/xinput.png" alt=""></p>
+<p>The master pointer and master keyboard are abstractions at the level of the X server. These have multiple slave devices. These slave devices are the interfaces provided by the device drivers (these are produced by listening to events in the files in <code>/dev/input</code>). The interface between the moving the physical mouse and the cursor on the screen is apparent here (the latter is done by X on the basis of events it receives from the device and the former can be done from any one of the TrackPoint, the USB mouse or the TouchPad).</p>
+<p>The mappings of the buttons can be found using the <code>get-button-map</code> argument with the command.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ xinput get-button-map <span style="color:#e6db74">&#39;TPPS/2 Elan TrackPoint&#39;</span>
+<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span>
+</code></pre></div><p>Here, each of the integers correspond to events- clicking a physical button or the movement of the wheel in a particular direction. The <code>2</code> corresponds to the middle click. We can disable this by replacing it with <code>0</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ xinput set-button-map <span style="color:#e6db74">&#39;TPPS/2 Elan TrackPoint&#39;</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span>
+</code></pre></div><p>Another way would be to disable the middle click functionality at the level of the pointer. We can do this by adding the following line to the  <code>~/.Xmodmap</code> file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">pointer = 1 0 3 4 5 6 7
+</code></pre></div><p>As this at the level of the server, it will disable the middle click for any device controlling the pointer.</p>
+<p>After this, the middle click was disabled while retaining the scrolling behavior. No text was pasted on clicking the middle button!</p>
+<h3 id="yay">Yay(?)</h3>
+<p>Well, not quite.</p>
+<p>There are some other useful behaviors of the middle click in the browser, like directly closing tabs and opening links in new tabs.</p>
+<p><img src="/img/tab-close.gif" alt=""></p>
+<p><img src="/img/new-tab-middle-click.gif" alt=""></p>
+<p>I have unconsciously become habituated to these features. So removing the middle click functionality caused a lot of discomfort.</p>
+<p>The answers that I found <a href="https://unix.stackexchange.com/questions/24330/how-can-i-turn-off-middle-mouse-button-paste-functionality-in-all-programs">here</a> work in some programs, but cause issues while copying in others. I ended up keeping the middle click anyways.</p>
+<p>Until I find a concrete solution to this, I guess I&rsquo;ll just have to be careful while scrolling :)</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/tech">tech</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+	<script src="https://utteranc.es/client.js"
+        	repo="parth-paradkar/parth-paradkar.github.io"
+	        issue-term="pathname"
+	        label="comment"
+	        theme="preferred-color-scheme"
+	        crossorigin="anonymous"
+	        async>
+	</script>	
+</main>
+<footer>
+<hr><a class="soc" href="https://github.com/parth-paradkar" title="GitHub"><i data-feather="github"></i></a>|<a class="soc" href="https://twitter.com/parthparadkar_" title="Twitter"><i data-feather="twitter"></i></a>|⚡️
+	2021  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+</footer>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-179536383-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>
+      feather.replace()
+</script></div>
+    </body>
+</html>
