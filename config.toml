@@ -8,6 +8,7 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 paginate=5 # articles per page
+googleAnalytics = "UA-179536383-1"
 
 [params]
 	mode="auto" # color-mode → light,dark or auto
