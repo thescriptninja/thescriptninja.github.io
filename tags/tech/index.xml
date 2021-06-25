@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tech on Parth Paradkar</title>
-    <link>https://parth-paradkar.github.io/tags/tech/</link>
+    <link>https://parth-paradkar.me/tags/tech/</link>
     <description>Recent content in tech on Parth Paradkar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 May 2021 13:03:28 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 13:03:28 +0530</lastBuildDate><atom:link href="https://parth-paradkar.me/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Middle Click in X</title>
-      <link>https://parth-paradkar.github.io/posts/middle-click-in-x/</link>
+      <link>https://parth-paradkar.me/posts/middle-click-in-x/</link>
       <pubDate>Fri, 21 May 2021 13:03:28 +0530</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/middle-click-in-x/</guid>
+      <guid>https://parth-paradkar.me/posts/middle-click-in-x/</guid>
       <description>A very useful and unique feature of the ThinkPad is the TrackPoint (red dot in the picture below), which is used to control the mouse pointer. It works through applying varying amounts of pressure in the direction of movement (more pressure, faster movement). While it isn&amp;rsquo;t popular, it has won me over to the point that I find using the normal touchpad inconvenient. The biggest advantage for me is that I don&amp;rsquo;t need to move my hand too far from the keyboard to scroll/click.</description>
     </item>
     
     <item>
       <title>Building a VS Code extension</title>
-      <link>https://parth-paradkar.github.io/posts/building-a-vs-code-extension/</link>
+      <link>https://parth-paradkar.me/posts/building-a-vs-code-extension/</link>
       <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/building-a-vs-code-extension/</guid>
+      <guid>https://parth-paradkar.me/posts/building-a-vs-code-extension/</guid>
       <description>Motivation I have been writing TILs(short notes about what I learned each day) in Dendron for a few days now, for which I need to specify the date of each TIL. Since looking at the date in the top right corner and typing a few characters out was excruciatingly painful, I used to get this from the date shell command. This required me to open a terminal in VS Code (I usually don’t have one open when I am writing notes), enter the command, copy the output and paste it where I required it.</description>
     </item>
     
     <item>
       <title>Exploring CPython</title>
-      <link>https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/</link>
+      <link>https://parth-paradkar.me/posts/exploring-the-python-virtual-machine/</link>
       <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/</guid>
+      <guid>https://parth-paradkar.me/posts/exploring-the-python-virtual-machine/</guid>
       <description>Inspiration Last year, I came across this GitHub repo, which describes how the internet works in great detail by going through everything that happens from when the user enters a character in the browser to when the web page is displayed. I liked the idea of taking something commonplace and going very deep into its workings. I wondered if the same could be done for a user running a very simple Python script.</description>
     </item>
     
     <item>
       <title>Shifting to Hugo</title>
-      <link>https://parth-paradkar.github.io/posts/shift-to-hugo/</link>
+      <link>https://parth-paradkar.me/posts/shift-to-hugo/</link>
       <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/shift-to-hugo/</guid>
+      <guid>https://parth-paradkar.me/posts/shift-to-hugo/</guid>
       <description>After having used Jekyll for a long time, I have shifted to Hugo for this GitHub pages blog.
 What is Hugo? Hugo, just like Jekyll, is a static site generator. While Jekyll is written in Ruby, Hugo is written in Go. These generators source their content from markdown files. They use templating engines to generate the required HTML, CSS and JS files according to the logic described in the config file and templates.</description>
     </item>

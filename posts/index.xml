@@ -2,83 +2,83 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Parth Paradkar</title>
-    <link>https://parth-paradkar.github.io/posts/</link>
+    <link>https://parth-paradkar.me/posts/</link>
     <description>Recent content in Posts on Parth Paradkar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Jun 2021 23:42:28 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jun 2021 23:42:28 +0530</lastBuildDate><atom:link href="https://parth-paradkar.me/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on Animal Farm</title>
-      <link>https://parth-paradkar.github.io/posts/notes-on-animal-farm/</link>
+      <link>https://parth-paradkar.me/posts/notes-on-animal-farm/</link>
       <pubDate>Wed, 23 Jun 2021 23:42:28 +0530</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/notes-on-animal-farm/</guid>
+      <guid>https://parth-paradkar.me/posts/notes-on-animal-farm/</guid>
       <description>“It was a pig walking on its hind legs”
 This sentence might be totally memorable or completely irrelevant for people who have and haven’t read Animal Farm. It is the climax of the book, which shows the true corruption of the pigs and complete perversion of the original ideals of Animalism. It was the most shocking moment in the story for me, one that made me put the book down and think.</description>
     </item>
     
     <item>
       <title>Middle Click in X</title>
-      <link>https://parth-paradkar.github.io/posts/middle-click-in-x/</link>
+      <link>https://parth-paradkar.me/posts/middle-click-in-x/</link>
       <pubDate>Fri, 21 May 2021 13:03:28 +0530</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/middle-click-in-x/</guid>
+      <guid>https://parth-paradkar.me/posts/middle-click-in-x/</guid>
       <description>A very useful and unique feature of the ThinkPad is the TrackPoint (red dot in the picture below), which is used to control the mouse pointer. It works through applying varying amounts of pressure in the direction of movement (more pressure, faster movement). While it isn&amp;rsquo;t popular, it has won me over to the point that I find using the normal touchpad inconvenient. The biggest advantage for me is that I don&amp;rsquo;t need to move my hand too far from the keyboard to scroll/click.</description>
     </item>
     
     <item>
       <title>Building a VS Code extension</title>
-      <link>https://parth-paradkar.github.io/posts/building-a-vs-code-extension/</link>
+      <link>https://parth-paradkar.me/posts/building-a-vs-code-extension/</link>
       <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/building-a-vs-code-extension/</guid>
+      <guid>https://parth-paradkar.me/posts/building-a-vs-code-extension/</guid>
       <description>Motivation I have been writing TILs(short notes about what I learned each day) in Dendron for a few days now, for which I need to specify the date of each TIL. Since looking at the date in the top right corner and typing a few characters out was excruciatingly painful, I used to get this from the date shell command. This required me to open a terminal in VS Code (I usually don’t have one open when I am writing notes), enter the command, copy the output and paste it where I required it.</description>
     </item>
     
     <item>
       <title>Write Anyways</title>
-      <link>https://parth-paradkar.github.io/posts/write-anyways/</link>
+      <link>https://parth-paradkar.me/posts/write-anyways/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/write-anyways/</guid>
+      <guid>https://parth-paradkar.me/posts/write-anyways/</guid>
       <description>Whenever I think of writing anything on my blog, I immediately start judging the worth of what I am about to write. For a long time, I believed that writing was worth it only if I had something new to offer. Under this belief, I shied away from writing about things and ideas that I had learned about, knowing that there was someone who had already written about them more lucidly and comprehensively than I ever could.</description>
     </item>
     
     <item>
       <title>Exploring CPython</title>
-      <link>https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/</link>
+      <link>https://parth-paradkar.me/posts/exploring-the-python-virtual-machine/</link>
       <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/exploring-the-python-virtual-machine/</guid>
+      <guid>https://parth-paradkar.me/posts/exploring-the-python-virtual-machine/</guid>
       <description>Inspiration Last year, I came across this GitHub repo, which describes how the internet works in great detail by going through everything that happens from when the user enters a character in the browser to when the web page is displayed. I liked the idea of taking something commonplace and going very deep into its workings. I wondered if the same could be done for a user running a very simple Python script.</description>
     </item>
     
     <item>
       <title>Shifting to Hugo</title>
-      <link>https://parth-paradkar.github.io/posts/shift-to-hugo/</link>
+      <link>https://parth-paradkar.me/posts/shift-to-hugo/</link>
       <pubDate>Sat, 09 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/shift-to-hugo/</guid>
+      <guid>https://parth-paradkar.me/posts/shift-to-hugo/</guid>
       <description>After having used Jekyll for a long time, I have shifted to Hugo for this GitHub pages blog.
 What is Hugo? Hugo, just like Jekyll, is a static site generator. While Jekyll is written in Ruby, Hugo is written in Go. These generators source their content from markdown files. They use templating engines to generate the required HTML, CSS and JS files according to the logic described in the config file and templates.</description>
     </item>
     
     <item>
       <title>Content Review 2020</title>
-      <link>https://parth-paradkar.github.io/posts/content-review/</link>
+      <link>https://parth-paradkar.me/posts/content-review/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/content-review/</guid>
+      <guid>https://parth-paradkar.me/posts/content-review/</guid>
       <description>In 2020, the amount of time I spent on the internet was probably the highest I have in any previous year and I have consumed a near-unhealthy amount of digital content while being at home for long periods. I thought it would be nice to look back. This is inspired by a recent blogpost by @xypnox.
 Literature I read regularly before joining college, but because of involvements on campus and other things to explore, I didn’t read as much as I used to.</description>
     </item>
     
     <item>
       <title>CDC Internship Process 2020 - Cisco</title>
-      <link>https://parth-paradkar.github.io/posts/cdc-internship-process-2020-cisco/</link>
+      <link>https://parth-paradkar.me/posts/cdc-internship-process-2020-cisco/</link>
       <pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/cdc-internship-process-2020-cisco/</guid>
+      <guid>https://parth-paradkar.me/posts/cdc-internship-process-2020-cisco/</guid>
       <description>This is an account of my experience of the CDC internship process 2020-21. Undergraduate students at IIT KGP need to complete an internship at the end of their pre-final year. Career Development Cell (CDC) manages the process for the same.
  Disclaimer (for people who tend to generalize):
 I was shortlisted for only one company (Cisco) and I got an internship offer from that company itself. So whatever advice/information that follows is probably not all-encompassing and fully informed.</description>
@@ -86,19 +86,19 @@ I was shortlisted for only one company (Cisco) and I got an internship offer fro
     
     <item>
       <title>Memories of 2.2s</title>
-      <link>https://parth-paradkar.github.io/posts/memories-of-2.2s/</link>
+      <link>https://parth-paradkar.me/posts/memories-of-2.2s/</link>
       <pubDate>Sat, 27 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/memories-of-2.2s/</guid>
+      <guid>https://parth-paradkar.me/posts/memories-of-2.2s/</guid>
       <description>Walks on college roads have no obligation to occur at a ‘proper’ time of the day. Their spontaneity owes itself to the comfort of the roads being inseparable landmarks of the campus the students proudly call their second home. If ever there was a road that could be buzzing with activity at 2 AM and deathly quiet at 11 AM, it would be the beloved 2.2 of IIT Kharagpur. Visitors often look and praise buildings- the main building with its stately proclamation of service and patriotism, the massive library, Gymkhana, the classrooms in Nalanda, the Netaji auditorium and look in awe at them for having stood through the years shouldering the weight of some of India’s smartest.</description>
     </item>
     
     <item>
       <title>Hello world!</title>
-      <link>https://parth-paradkar.github.io/posts/first-post/</link>
+      <link>https://parth-paradkar.me/posts/first-post/</link>
       <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/posts/first-post/</guid>
+      <guid>https://parth-paradkar.me/posts/first-post/</guid>
       <description>After a LOT of Google searches, deleted repositories and headaches born out of frustration, this blog is finally and thankfully up and running. Who was the guy who said Jekyll was easy?
 Now that a blog has been born, so has the responsibility of posting regularly. So let’s see how this works out! But for now, Adios!
 BTW here is the most useful link I found to create this blog</description>

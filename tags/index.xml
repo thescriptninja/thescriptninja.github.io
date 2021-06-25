@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Parth Paradkar</title>
-    <link>https://parth-paradkar.github.io/tags/</link>
+    <link>https://parth-paradkar.me/tags/</link>
     <description>Recent content in Tags on Parth Paradkar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Jun 2021 23:42:28 +0530</lastBuildDate><atom:link href="https://parth-paradkar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jun 2021 23:42:28 +0530</lastBuildDate><atom:link href="https://parth-paradkar.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>literature</title>
-      <link>https://parth-paradkar.github.io/tags/literature/</link>
+      <link>https://parth-paradkar.me/tags/literature/</link>
       <pubDate>Wed, 23 Jun 2021 23:42:28 +0530</pubDate>
       
-      <guid>https://parth-paradkar.github.io/tags/literature/</guid>
+      <guid>https://parth-paradkar.me/tags/literature/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tech</title>
-      <link>https://parth-paradkar.github.io/tags/tech/</link>
+      <link>https://parth-paradkar.me/tags/tech/</link>
       <pubDate>Fri, 21 May 2021 13:03:28 +0530</pubDate>
       
-      <guid>https://parth-paradkar.github.io/tags/tech/</guid>
+      <guid>https://parth-paradkar.me/tags/tech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>note</title>
-      <link>https://parth-paradkar.github.io/tags/note/</link>
+      <link>https://parth-paradkar.me/tags/note/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://parth-paradkar.github.io/tags/note/</guid>
+      <guid>https://parth-paradkar.me/tags/note/</guid>
       <description></description>
     </item>
     
