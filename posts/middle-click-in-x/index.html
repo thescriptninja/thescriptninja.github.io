@@ -65,12 +65,12 @@
 <p><img src="/img/xinput.png" alt=""></p>
 <p>The master pointer and master keyboard are abstractions at the level of the X server. These have multiple slave devices. These slave devices are the interfaces provided by the device drivers (these are produced by listening to events in the files in <code>/dev/input</code>). The interface between the moving the physical mouse and the cursor on the screen is apparent here (the latter is done by X on the basis of events it receives from the device and the former can be done from any one of the TrackPoint, the USB mouse or the TouchPad).</p>
 <p>The mappings of the buttons can be found using the <code>get-button-map</code> argument with the command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ xinput get-button-map <span style="color:#e6db74">&#39;TPPS/2 Elan TrackPoint&#39;</span>
-<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ xinput get-button-map <span style="color:#d14">&#39;TPPS/2 Elan TrackPoint&#39;</span>
+<span style="color:#099">1</span> <span style="color:#099">2</span> <span style="color:#099">3</span> <span style="color:#099">4</span> <span style="color:#099">5</span> <span style="color:#099">6</span> <span style="color:#099">7</span>
 </code></pre></div><p>Here, each of the integers correspond to events- clicking a physical button or the movement of the wheel in a particular direction. The <code>2</code> corresponds to the middle click. We can disable this by replacing it with <code>0</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ xinput set-button-map <span style="color:#e6db74">&#39;TPPS/2 Elan TrackPoint&#39;</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">7</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ xinput set-button-map <span style="color:#d14">&#39;TPPS/2 Elan TrackPoint&#39;</span> <span style="color:#099">1</span> <span style="color:#099">0</span> <span style="color:#099">3</span> <span style="color:#099">4</span> <span style="color:#099">5</span> <span style="color:#099">6</span> <span style="color:#099">7</span>
 </code></pre></div><p>Another way would be to disable the middle click functionality at the level of the pointer. We can do this by adding the following line to the  <code>~/.Xmodmap</code> file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">pointer = 1 0 3 4 5 6 7
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">pointer = 1 0 3 4 5 6 7
 </code></pre></div><p>As this at the level of the server, it will disable the middle click for any device controlling the pointer.</p>
 <p>After this, the middle click was disabled while retaining the scrolling behavior. No text was pasted on clicking the middle button!</p>
 <h3 id="yay">Yay(?)</h3>
@@ -103,7 +103,7 @@
         	repo="parth-paradkar/parth-paradkar.github.io"
 	        issue-term="pathname"
 	        label="comment"
-	        theme="preferred-color-scheme"
+	        theme="github-light"
 	        crossorigin="anonymous"
 	        async>
 	</script>

@@ -53,16 +53,16 @@
 <p>Well, that’s what I thought.</p>
 <p>Initially, I stuck to my approach of getting the date from the shell command and somehow transferring it to the text editor in focus. The next logical step was to get the output of the command into the clipboard. After that, it could be pasted into the editor automatically. The aim was to achieve all this with a single keystroke or key combination.</p>
 <p>To transfer the output of the <code>date</code> command to the clipboard, I came across <code>xclip</code> and it worked pretty good.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> date | xclip -sel clip
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> date | xclip -sel clip
 </code></pre></div><p>This command pipes the output of date to the clipboard. Now, how to run this in the VS Code environment?</p>
 <p>Apparently, keybindings can only call methods available in the VS Code API directly. To attach a keybinding to a shell command, I found that an extension has to be installed. Using this extension, I was able to attach the above command to a preferred key combination. This was done by adding an entry in the <code>keybindings.json</code> file as follows.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
-    <span style="color:#f92672">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;ctrl+m d&#34;</span>,
-    <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;terminalCommandKeys.run&#34;</span>,
-    <span style="color:#f92672">&#34;args&#34;</span>: {
-        <span style="color:#f92672">&#34;cmd&#34;</span>: <span style="color:#e6db74">&#34;date | xclip -sel clip&#34;</span>,
-        <span style="color:#f92672">&#34;newTerminal&#34;</span>: <span style="color:#66d9ef">false</span>,
-        <span style="color:#f92672">&#34;showTerminal&#34;</span>: <span style="color:#66d9ef">false</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+    <span style="color:#000080">&#34;key&#34;</span>: <span style="color:#d14">&#34;ctrl+m d&#34;</span>,
+    <span style="color:#000080">&#34;command&#34;</span>: <span style="color:#d14">&#34;terminalCommandKeys.run&#34;</span>,
+    <span style="color:#000080">&#34;args&#34;</span>: {
+        <span style="color:#000080">&#34;cmd&#34;</span>: <span style="color:#d14">&#34;date | xclip -sel clip&#34;</span>,
+        <span style="color:#000080">&#34;newTerminal&#34;</span>: <span style="color:#000;font-weight:bold">false</span>,
+        <span style="color:#000080">&#34;showTerminal&#34;</span>: <span style="color:#000;font-weight:bold">false</span>
     }
  }
 </code></pre></div><p>Now the task was to transfer the text from the clipboard to the position of the cursor. This had to be done using the VS Code API. This is where the problem started. Apparently, VS Code does not allow you to run multiple commands with a single key. It has been a long requested feature in VS Code and the only workarounds are awkward macros and tasks. There is really no straightforward way to combine the above shell command with a VS Code API call. You could argue that I could just do <code>Ctrl+V</code> after the xclip stage, but anything less than full automation is for peasants.</p>
@@ -96,7 +96,7 @@
         	repo="parth-paradkar/parth-paradkar.github.io"
 	        issue-term="pathname"
 	        label="comment"
-	        theme="preferred-color-scheme"
+	        theme="github-light"
 	        crossorigin="anonymous"
 	        async>
 	</script>

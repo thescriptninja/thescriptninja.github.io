@@ -57,19 +57,19 @@
 <h2 id="show-me-the-code">Show me the code!</h2>
 <p>You can inspect bytecode in Python yourself too.</p>
 <p>Let us write a simple function <code>add_nums</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_nums</span>(a, b):
-   c <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b
-   <span style="color:#66d9ef">return</span> c
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">add_nums</span>(a, b):
+   c <span style="color:#000;font-weight:bold">=</span> a <span style="color:#000;font-weight:bold">+</span> b
+   <span style="color:#000;font-weight:bold">return</span> c
 </code></pre></div><p>Save this in a file called <code>add.py</code> and run it in interactive mode. Try inspecting the <code>add_nums</code> object as shown below:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ python -i add.py
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ python -i add.py
 &gt;&gt; add_nums.__code__.co_code
 </code></pre></div><p>Some bytes are printed out.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">b&#39;|\x00|\x01\x17\x00}\x02|\x02S\x00&#39;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">b&#39;|\x00|\x01\x17\x00}\x02|\x02S\x00&#39;
 </code></pre></div><p>This is the compiled bytecode that the Python VM runs when it executes this particular function. You can call this is the ‘machine language’ of the CPython VM. (This is NOT the binary code run by the CPU. Only the CPython VM understands this).</p>
 <p>But you may ask now that if <em>this</em> is the machine code, where are the Assembly language equivalent instructions, that are understandable by humans. To get this in a readable format, we use the <a href="https://docs.python.org/3/library/dis.html">dis</a> module in Python, which is used as a <a href="https://en.wikipedia.org/wiki/Disassembler">disassembler</a>.</p>
 <p>In the same interactive shell above, run the following code</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> dis
-<span style="color:#f92672">&gt;&gt;&gt;</span> dis<span style="color:#f92672">.</span>dis(add_nums<span style="color:#f92672">.</span>__code__<span style="color:#f92672">.</span>co_code)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">&gt;&gt;&gt;</span> <span style="color:#000;font-weight:bold">import</span> <span style="color:#555">dis</span>
+<span style="color:#000;font-weight:bold">&gt;&gt;&gt;</span> dis<span style="color:#000;font-weight:bold">.</span>dis(add_nums<span style="color:#000;font-weight:bold">.</span>__code__<span style="color:#000;font-weight:bold">.</span>co_code)
 </code></pre></div><p>You will see this output:</p>
 <pre><code>0 LOAD_FAST                0 (0)
 2 LOAD_FAST                1 (1)
@@ -100,11 +100,11 @@
 <h2 id="more-examples">More examples</h2>
 <p>Let us see some more examples.</p>
 <p>Modify the <code>add_nums</code> function to include a conditional:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_nums</span>(a, b):
-    c <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b
-    <span style="color:#66d9ef">if</span> c <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> c <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
-    <span style="color:#66d9ef">return</span> c
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">add_nums</span>(a, b):
+    c <span style="color:#000;font-weight:bold">=</span> a <span style="color:#000;font-weight:bold">+</span> b
+    <span style="color:#000;font-weight:bold">if</span> c <span style="color:#000;font-weight:bold">%</span> <span style="color:#099">2</span> <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span> <span style="color:#000;font-weight:bold">and</span> c <span style="color:#000;font-weight:bold">%</span> <span style="color:#099">3</span> <span style="color:#000;font-weight:bold">==</span> <span style="color:#099">0</span>:
+        <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>
+    <span style="color:#000;font-weight:bold">return</span> c
 </code></pre></div><p>As in the earlier example, we look at the disassembled bytecode.</p>
 <pre><code>          0 LOAD_FAST                0 (0)
           2 LOAD_FAST                1 (1)
@@ -129,13 +129,13 @@
 </code></pre>
 <p>While this looks pretty scary, the important part to note is the two <code>POP_JUMP_IF_FALSE</code> statements. These statements tell the VM to make a jump to a particular instruction and pop the boolean from top of the stack. The first <code>POP_JUMP_IF_FALSE</code> instruction evaluates the boolean value on top of the stack (produced by <code>COMPARE_OP</code>) and directly makes a jump to the instruction with offset <code>36</code>, that is the penultimate instruction in this series. This is an optimization as the needless evaluation of the second boolean expression is saved (if the first value is false in AND, there is no need to evaluate the second value).</p>
 <p>Let us include a loop in the function and see what happens</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_nums</span>(a, b):
-    c <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b
-    <span style="color:#66d9ef">while</span> c <span style="color:#f92672">&gt;</span> a <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>:
-        c <span style="color:#f92672">=</span> c <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">return</span> c
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">add_nums</span>(a, b):
+    c <span style="color:#000;font-weight:bold">=</span> a <span style="color:#000;font-weight:bold">+</span> b
+    <span style="color:#000;font-weight:bold">while</span> c <span style="color:#000;font-weight:bold">&gt;</span> a <span style="color:#000;font-weight:bold">/</span> <span style="color:#099">2</span>:
+        c <span style="color:#000;font-weight:bold">=</span> c <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>
+    <span style="color:#000;font-weight:bold">return</span> c
 </code></pre></div><p>The disassembled bytecode is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    		0 LOAD_FAST                0 (0)
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    		0 LOAD_FAST                0 (0)
               2 LOAD_FAST                1 (1)
               4 BINARY_ADD
               6 STORE_FAST               2 (2)
@@ -183,7 +183,7 @@
         	repo="parth-paradkar/parth-paradkar.github.io"
 	        issue-term="pathname"
 	        label="comment"
-	        theme="preferred-color-scheme"
+	        theme="github-light"
 	        crossorigin="anonymous"
 	        async>
 	</script>
