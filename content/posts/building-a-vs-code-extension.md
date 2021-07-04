@@ -1,5 +1,5 @@
 ---
-title: "Building a VS Code extension"
+title: "ClipDate- a VS Code extension"
 description: Quite an unnecessary one tbh
 date: 2021-05-04
 tags: [tech]
