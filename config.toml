@@ -1,9 +1,9 @@
-baseURL = "https://parth-paradkar.github.io/"
+baseURL = "https://parth-paradkar.me/"
 languageCode = "en-us"
 title = "Parth Paradkar"
 theme="archie"
 # Code Highlight
-pygmentsstyle = "monokai"
+pygmentsstyle = "github"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
@@ -11,7 +11,7 @@ paginate=5 # articles per page
 googleAnalytics = "UA-179536383-1"
 
 [params]
-	mode="auto" # color-mode → light,dark or auto
+	mode="light" # color-mode → light,dark or auto
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
 	subtitle = "Notes on programming and life"
 
@@ -45,6 +45,11 @@ url = "/about"
 weight = 3
 
 [[menu.main]]
+name = "CV"
+url = "/cv.pdf"
+weight = 4
+
+[[menu.main]]
 name = "Tags"
 url = "/tags"
-weight = 4
+weight = 5

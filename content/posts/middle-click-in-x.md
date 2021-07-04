@@ -2,6 +2,7 @@
 title: "Middle Click in X"
 date: 2021-05-21T13:03:28+05:30
 description: "Input devices and selections"
+tags: [tech]
 draft: false
 ---
 
@@ -21,7 +22,7 @@ I tolerated this for a long time, even with unintended words appearing in commit
 
 A way for inter-client communication in X is through selections. When text is selected in any window, it is stored in the [Xorg](https://wiki.x.org/wiki/) server and identified by an `atom` (a 'name'). While there can be an arbitrary number of selections, the important ones are the `PRIMARY` selection and the `clipboard` selection.
 
-Each selection is owned by a client (a particular window). When the text in a particular selection is to be pasted in another window, it asks the server for that selection using the atom used to identified it.  The server then refers the request to the window that owns that selection. The window responds with the text and the it can then be pasted.
+Each selection is owned by a client (a particular window). When the text in a particular selection is to be pasted in another window, it asks the server for that selection using the atom used to identified it.  The server then refers the request to the window that owns that selection. The window responds with the text and it can then be pasted.
 
 On selecting text in a window with a cursor, the ownership of `PRIMARY` selection is transferred to the current window, with its value as the selected text. Text is moved to the `clipboard` selection on an explicit copy instruction (`Ctrl+C` etc). When the middle button on the mouse is clicked, the `PRIMARY` selection is pasted in the current window. 
 
