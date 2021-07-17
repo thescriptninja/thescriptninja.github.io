@@ -73,3 +73,5 @@ Thanks for reading!
 [CDC CV](https://drive.google.com/file/d/1A04tlYh30YySr6FV7ZU2Ic_UKEzKHXpu/view?usp=sharing)
 
 [Github Profile](https://github.com/parth-paradkar)
+
+Update: Find my internship experience blog [here](https://parth-paradkar.me/posts/cisco-internship-experience/).
