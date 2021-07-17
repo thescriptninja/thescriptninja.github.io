@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Summer Internship at Cisco - Parth Paradkar</title><meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Summer Internship at Cisco" />
+<meta property="og:description" content="Experience and Learnings" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://parth-paradkar.me/posts/cisco-internship-experience/" />
+<meta property="article:published_time" content="2021-07-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-17T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Summer Internship at Cisco"/>
+<meta name="twitter:description" content="Experience and Learnings"/>
+<script src="https://parth-paradkar.me/js/feather.min.js"></script>
+	
+	<link href="https://parth-paradkar.me/css/fonts.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://parth-paradkar.me/css/main.css" />
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://parth-paradkar.me/">Parth Paradkar</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/cv.pdf">CV</a>
+		
+		<a href="/tags">Tags</a>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Summer Internship at Cisco</h1>
+			<div class="meta">Posted on Jul 17, 2021</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Yesterday, I completed my software development summer internship at <a href="https://www.cisco.com/">Cisco</a>. The internship was sadly conducted virtually from home. Even so, it was exciting to start work after the lull in activity caused by the end of the semester. The tension of the first day was muted, as all I had to do was open the laptop screen like a thousand times before. Out of a sense of propriety, I made the effort of putting on jeans (after several weeks) instead of my usual sweatpants, but dropped the pretense the next day onwards.</p>
+<p>While I can’t reveal the exact details of my project, I will try to enlist some of the things that I learned in the internship.</p>
+<h3 id="pdb---the-python-debugger">pdb - The Python Debugger</h3>
+<p>Multiple college seniors I know had previously recommended using a debugger while programming, but I lacked motivation to use it since I was getting by using print statements all over the code. After using <a href="https://docs.python.org/3/library/pdb.html">pdb</a> in the intern, the print statement method of debugging seems crude.</p>
+<p>If we need to inspect the state of the variables at any point in the execution, we can insert a single line <code>import pdb; pdb.set_trace()</code> in the code. This will cause the interpreter to pause the flow of execution at that point while preserving all the objects that are created in the current frame until then. The <code>(n)ext</code> command is particularly useful, which can be used to execute the code line-by-line. Going back to the print statement method doesn’t make sense now :)</p>
+<h3 id="context-managers">Context managers</h3>
+<p>I had known that context managers were quite useful before, but I realized this fully when I felt the need to write one myself. Having multiple unhandled clients open to a particular server was becoming an issue. Using context managers to handle the connection objects proved to be a very clean and elegant solution, rather than closing connection objects every time they complete their function.</p>
+<h3 id="router-technologies">Router technologies</h3>
+<p>As a part of my project, I got to use networking tools like <a href="http://www.yang-central.org/twiki/pub/Main/YangDocuments/rfc6020.html">YANG</a>, <a href="https://datatracker.ietf.org/doc/html/rfc6241">Netconf</a> and RPCs. Netconf is a protocol that is used to manipulate the configuration of routers. Netconf operations are carried out over an RPC layer that transfers data using XML. The configuration for the routers is modelled using the YANG modelling language. Router configuration is stored as a set of ‘YANG models’. I also got an experience of using Cisco’s <a href="https://en.wikipedia.org/wiki/Cisco_IOS_XR">IOS XR</a> network operating system, which was quite interesting.</p>
+<h3 id="some-django">Some Django</h3>
+<p>Until before this internship, I had mostly worked with Flask as the backend framework (a little bit of <a href="https://falconframework.org/">Falcon</a> at my previous internship). I was introduced to Django in this internship, and it lived up to its reputation of being powerful as well as complicated.</p>
+<p>A great thing I found about Django was that it had built-in support for connecting databases. Earlier, I had used an ORM (SQLAlchemy) as abstractions over SQL. Django natively supports creating models for different databases like MySQL, PostgreSQL, etc and using them to run queries through an object-oriented interface.</p>
+<p>Another useful feature of Django is the django-admin commands functionality. It allows writing custom scripts in the <code>management/commands</code> directory. These scripts can be set up as cron jobs in the <code>settings.py</code> file. This is especially useful if we have to use database models and other functionalities available in the Django environment while running our scripts.</p>
+<h3 id="importance-of-documentation">Importance of documentation</h3>
+<p>I learned the importance of good documentation from the lack of it. As the project I was working on was relatively new, I faced difficulties in understanding the different moving parts of the code because of insufficient documentation. The time I spent trying to figure things out could have been saved and spent in actual development had there been good documentation. I realized that documentation makes asynchronous work possible. In an ideal situation, it should exist for all parts of the code and other guidelines, which can eliminate the need to wait for in-person knowledge transfer.</p>
+<h3 id="maintaining-a-work-log">Maintaining a work log</h3>
+<p>Through the six weeks, I tried to maintain a work log, where I noted down what all I had accomplished that day and what were the tasks for tomorrow. In addition to this, I also wrote down any important observations from working or having conversations with my mentor. This method helped to keep me on track with my work. I hope to apply this method in the future too.</p>
+<h2 id="final-thoughts">Final thoughts</h2>
+<p>The most obvious thing that I felt lacking in my internship experience was a feeling of community and togetherness. In virtual mode, the feeling of working in a ‘team’ becomes very weak especially in a large organization and among completely new people. This made me feel isolated while working on my project. While I don&rsquo;t mind working solo, I think a lot of learning was missed. In my previous internships, I got the chance to interact with full-time employees and co-interns in a casual environment outside of work. I sorely missed that feeling while working in this period. I guess it is just another misfortune of the times we are living in.</p>
+<p>Anyways, I got to learn new things (and also got paid decently), for which I am grateful.</p>
+<p>Peace!</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+	</article>
+	
+	<script src="https://utteranc.es/client.js"
+        	repo="parth-paradkar/parth-paradkar.github.io"
+	        issue-term="pathname"
+	        label="comment"
+	        theme="github-light"
+	        crossorigin="anonymous"
+	        async>
+	</script>
+	
+</main>
+<footer>
+<hr><a class="soc" href="https://github.com/parth-paradkar" title="GitHub"><i data-feather="github"></i></a>|<a class="soc" href="https://twitter.com/parthparadkar_" title="Twitter"><i data-feather="twitter"></i></a>|⚡️
+	2021  <a href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+</footer>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-179536383-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>
+      feather.replace()
+</script></div>
+    </body>
+</html>

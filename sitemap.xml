@@ -3,22 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://parth-paradkar.me/</loc>
+    <lastmod>2021-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://parth-paradkar.me/posts/</loc>
+    <lastmod>2021-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://parth-paradkar.me/posts/cisco-internship-experience/</loc>
+    <lastmod>2021-07-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://parth-paradkar.me/tags/literature/</loc>
     <lastmod>2021-06-23T23:42:28+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://parth-paradkar.me/posts/notes-on-animal-farm/</loc>
-    <lastmod>2021-06-23T23:42:28+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://parth-paradkar.me/</loc>
-    <lastmod>2021-06-23T23:42:28+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://parth-paradkar.me/posts/</loc>
     <lastmod>2021-06-23T23:42:28+05:30</lastmod>
   </url>
   
